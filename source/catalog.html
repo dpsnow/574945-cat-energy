@@ -2,19 +2,20 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 <body>
   <h1 class="visually-hidden">Каталог кошачьих кормов магазина «Кэт Энерджи»</h1>
   <header class="page-header">
     <div class="logo page-header__item">
-      <a href="index.html"><img class="logo__icon" src="img/logo-icon.svg" alt="Логотип «Кэт Энерджи»" width="33" height="38"></a>
-      <a href="index.html"><img class="logo__name" src="img/logo-name.svg" alt="Надпись «Кэт Энерджи»" width="101" height="18"></a>
+      <a href="index.html">
+        <img class="logo__icon" src="img/logo-icon.svg" alt="Логотип «Кэт Энерджи»" width="33" height="38">
+        <img class="logo__name" src="img/logo-name.svg" alt="Надпись «Кэт Энерджи»" width="101" height="18">
+      </a>
     </div>
+    <button class="burger-button" aria-label="Показать/спрятать"></button>
     <nav class="page-header__item site-nav">
-      <button class="site-nav__toogle" aria-label="Показать/спрятать">
-        <span class="visually-hidden">Отображение меню</span>
-      </button>
       <ul class="site-nav__list">
         <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
         <li class="site-nav__item"><a class="site-nav__link site-nav__link--active">Каталог продукции</a></li>
@@ -25,7 +26,7 @@
   <main>
     <section class="catalog">
       <h2 class="catalog__title text text--title">Каталог продукции</h2>
-      <ol class="catalog__list">
+      <ul class="catalog__list">
         <li class="catalog__item product">
           <h3 class="product__name"><a class="product__link" href="product.html">Cat Energy PRO 500 г</a></h3>
           <a class="product__photo" href="product.html"><img class="" src="img/" alt="Фото продукта"></a>
@@ -159,18 +160,18 @@
           </table>
           <a class="product__btn page-btn" href="order.html">Заказать</a>
         </li>
-      </ol>
-      <div class="catalog__item catalog__item--more">
-        <p class="text text--uppercase">
-          Показать еще 100500 товаров
-          <span>На самом деле вкусов гораздо больше!</span>
-        </p>
-        <a class="catalog__link-more page-btn page-btn--grey" href="new-products.html">Показать все</a>
-      </div>
+        <li class="catalog__item catalog__item--more">
+          <p class="text text--uppercase">
+            Показать еще 100500 товаров
+            <span>На самом деле вкусов гораздо больше!</span>
+          </p>
+          <a class="catalog__link-more page-btn page-btn--grey" href="new-products.html">Показать все</a>
+        </li>
+      </ul>
     </section>
     <section class="additional">
       <h2 class="additional__title">Дополнительные товары</h2>
-      <ol class="additional__list">
+      <ul class="additional__list">
         <li class="additional__item other-product">
           <h3 class="other-product__name"><a class="other-product__link" href="product.html">Сахарозаменитель</a></h3>
           <table class="other-product__info">
@@ -211,21 +212,21 @@
           </table>
           <a class="other-product__btn page-btn" href="order.html">Заказать</a>
         </li>
-      </ol>
+      </ul>
     </section>
     <section class="promo">
       <h2 class="visually-hidden">Акция</h2>
-      <h3 class="promo__title">Закажите все и получите чехол для кота в подарок!</h3>
+      <p class="promo__title">Закажите все и получите чехол для кота в подарок!</p>
     </section>
   </main>
   <footer class="page-footer">
     <section class="page-footer__map location">
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="location__text">
-        <p class="location__slogan text text--title">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="location__slogan text text--uppercase">Приглашаем к сотрудничеству дилеров!</p>
         <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
-      <div class="location__map"></div>
+      <div class="location__map" id="map"></div>
     </section>
     <div class="page-footer__content footer">
       <div class="footer__item logo">
@@ -249,7 +250,7 @@
         </li>
       </ul>
       <div class="footer__item copyright">
-        <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
           <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="34">
         </a>
