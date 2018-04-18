@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дарья Плотникова](https://up.htmlacademy.ru/adaptive/14/user/574945).
-* Наставник: [Роман Ганин](https://htmlacademy.ru/profile/id195773).
+* Наставник: [Галина Борисова](https://htmlacademy.ru/profile/galina_borisova).
 
 ---
 
