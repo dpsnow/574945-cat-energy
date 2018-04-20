@@ -1,0 +1,27 @@
+.field {
+  padding: 5px 15px;
+  width: 100%;
+  min-height: 45px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: $clr-text;
+  text-transform: uppercase;
+  border: solid 1px #e3e3e3;
+
+
+  &:hover,
+  &:focus {
+    border: solid 1px #cdcdcd;
+  }
+
+  &:active {
+    border: solid 2px #444444;
+  }
+
+  &:invalid  {
+    border: solid 2px #ff8282;
+  }
+}
+

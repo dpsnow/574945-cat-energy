@@ -29,28 +29,28 @@
       <form class="personal-diet__form form-diet" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form-diet__item">
           <h3 class="visually-hidden">Данные кота</h3>
-          <label class="text text--uppercase">Имя:*<input class="field field--text" type="text" name="cat-name" required></label>
-          <label class="text text--uppercase">Вес (кг):*<input class="field field--text" type="number" name="cat-weight" required></label>
-          <label class="text text--uppercase">Возраст (лет):<input class="field field--text" type="number" name="cat-age"></label>
+          <label class="form-diet__label text text--uppercase">Имя:*<input class="field field--text" type="text" name="cat-name" value= "Барсик" required></label>
+          <label class="form-diet__label text text--uppercase">Вес (кг):*<input class="field field--text" type="number" name="cat-weight" value= "7" required></label>
+          <label class="form-diet__label text text--uppercase">Возраст (лет):<input class="field field--text" type="number" name="cat-age" value= "7"></label>
         </fieldset>
         <fieldset class="form-diet__item">
           <h3 class="visually-hidden">Выберите диету</h3>
-          <label class="text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="weight-loss" checked>Похудение</label>
-          <label class="text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="weight-gain">Набор массы</label>
-          <label class="text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="need-help">Не знаю (Нужен ваш совет)</label>
+          <label class="form-diet__label text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="weight-loss" checked>Похудение</label>
+          <label class="form-diet__label text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="weight-gain">Набор массы</label>
+          <label class="form-diet__label text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="need-help">Не знаю (Нужен ваш совет)</label>
         </fieldset>
         <fieldset class="form-diet__item">
-          <h3 class="form-diet__subtitle text text--special">Контактные данные (владельца кота)</h3>
-          <label class="text text--uppercase">E-mail:*<input class="field field--text" type="email" name="email" required></label>
-          <label class="text text--uppercase">Телефон:*<input class="field field--text" type="tel" name="number" required></label>
+          <h3 class="form-diet__subtitle text text--special">Контактные данные <br>(владельца кота)</h3>
+          <label class="form-diet__label text text--uppercase">E-mail:*<input class="field field--text" type="email" name="email" value="kuklachev@gmail.com" required></label>
+          <label class="form-diet__label text text--uppercase">Телефон:*<input class="field field--text" type="tel" name="number" value="8 (960) 900-60-90" required></label>
           <label class="form-diet__subtitle">Комментарий<textarea class="form-diet__field field field--textarea" name="message" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea></label>
         </fieldset>
         <fieldset class="form-diet__item">
           <h3 class="form-diet__subtitle text text--special">Дополнительно</h3>
-          <label class="text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-sweetener" checked>Сахарозаменитель</label>
-          <label class="text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-water">Питьевая вода</label>
-          <label class="text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-milk">Молоко</label>
-          <label class="text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-vitamins">Витамины</label>
+          <label class="form-diet__label text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-sweetener" checked>Сахарозаменитель</label>
+          <label class="form-diet__label text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-water">Питьевая вода</label>
+          <label class="form-diet__label text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-milk">Молоко</label>
+          <label class="form-diet__label text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-vitamins">Витамины</label>
         </fieldset>
         <input type="submit" value="Отправить заявку">
         <p class="form-diet__text">* — Обязательные поля</p>
