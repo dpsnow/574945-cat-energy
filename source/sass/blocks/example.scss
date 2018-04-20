@@ -1,0 +1,35 @@
+.example {
+  padding-top: 35px;
+  padding-bottom: 33px;
+  background-color: #f2f2f2;
+}
+
+.example__title {
+  margin-bottom: 23px;
+}
+
+/*добавлен line-height: 19px; иначе текст не бьется с PP*/
+.example__text {
+  padding-right: 10px;
+  line-height: 19px;
+}
+
+.example__statistics {
+  margin-top: 25px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__cost {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: $clr-main;
+}
+
+.example__slider {
+  flex-shrink: 0;
+  margin-top: 35px;
+  margin-bottom: 4px;
+}

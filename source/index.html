@@ -62,36 +62,38 @@
       </ul>
     </section>
     <section class="example">
-      <h2 class="example__title text text--title">Живой пример</h2>
-      <p class="example__text text text--content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <div class="example__statistics">
-        <dl class="data">
-          <dt class="data__title">5 кг</dt>
-          <dd class="data__descr">снижение веса</dd>
-        </dl>
-        <dl class="data">
-          <dt class="data__title">60 дней</dt>
-          <dd class="data__descr">затрачено времени</dd>
-        </dl>
+      <div class="example__content layout">
+        <h2 class="example__title text text--title">Живой пример</h2>
+        <p class="example__text text text--content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <div class="example__statistics">
+          <dl class="data">
+            <dt class="data__title text text--uppercase">5 кг</dt>
+            <dd class="data__descr">снижение веса</dd>
+          </dl>
+          <dl class="data">
+            <dt class="data__title text text--uppercase">60 дней</dt>
+            <dd class="data__descr">затрачено времени</dd>
+          </dl>
+        </div>
+        <p class="example__cost text text--uppercase">Затраты на питание: 15 000 руб.</p>
       </div>
-      <p class="example__cost">Затраты на питание: 15 000 руб.</p>
       <div class="example__slider slider">
-        <input class="visually-hidden" id="switch-before" type="radio" name="switch-photo" value="before">
-        <input class="visually-hidden" id="switch-after" type="radio" name="switch-photo" value="after">
+        <input class="slider__switch--to-1 visually-hidden" id="switch-before" type="radio" name="switch-photo" value="before" checked>
+        <input class="slider__switch--to-2 visually-hidden" id="switch-after" type="radio" name="switch-photo" value="after">
         <ul class="slider__list">
-          <li class="slider__item">
+          <li class="slider__item slider__item--before">
             <img class="slider__photo-before" src="img/before-mobile@1x.png" alt="Фотография кота до диеты">
           </li>
-          <li class="slider__item">
+          <li class="slider__item slider__item--after">
             <img class="slider__photo-after" src="img/after-mobile@1x.png" alt="Фотография кота после диеты">
           </li>
         </ul>
         <div class="slider__controls switch">
-          <div class="switch__control">
-            <label class="switch__left text text--uppercase" for="switch-before">Было</label>
-            <label class="switch__right text text--uppercase" for="switch-after">Стало</label>
-            <span class="switch__scale"></span>
-          </div>
+          <label class="switch__item switch__item--left text text--uppercase" for="switch-before">Было</label>
+          <span class="switch__scale">
+            <span class="switch__indicator"></span>
+          </span>
+          <label class="switch__item switch__item--right text text--uppercase" for="switch-after">Стало</label>
         </div>
       </div>
     </section>

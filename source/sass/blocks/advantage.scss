@@ -9,16 +9,16 @@
 .advantage__list {
   @include indent-reset;
   list-style: none;
-
 }
 
 .advantage__item {
   position: relative;
   padding-left: 80px;
+  margin-bottom: 29px;
 
-  & + & {
-    margin-top: 29px;
-  }
+  // & + & {
+  //   margin-top: 29px;
+  // }
 
   &::before {
     content: "";
