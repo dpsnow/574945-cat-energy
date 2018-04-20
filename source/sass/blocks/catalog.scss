@@ -1,0 +1,31 @@
+.catalog {
+  padding-top: 14px;
+  border-top: 1px solid #d6d6d6;
+}
+
+.catalog__title {
+  margin-bottom: 28px;
+  padding-left: 20px;
+}
+
+.catalog__list {
+  @include indent-reset;
+  list-style: none;
+  border-top: 1px solid #d6d6d6;
+}
+
+.catalog__item {
+  padding: 25px 20px;
+  & + & {
+    border-top: 1px solid #d6d6d6;
+  }
+
+}
+
+.catalog__item--more {
+
+}
+
+.catalog__link-more {
+
+}
