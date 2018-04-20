@@ -1,0 +1,19 @@
+.footer {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer__item {
+  min-height: 62px;
+  padding-top: 22px;
+  padding-bottom: 20px;
+
+  & + & {
+    border-top: 1px solid #ededec;
+  }
+}
+
+.footer__logo {
+  padding-bottom: 30px;
+}
+
