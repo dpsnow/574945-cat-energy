@@ -24,3 +24,19 @@
     text-transform: uppercase;
   }
 }
+
+.text--special {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    margin-left: 22px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-width: 3px;
+    height: 3px;
+    background-color: $crl-bg-main;
+  }
+}

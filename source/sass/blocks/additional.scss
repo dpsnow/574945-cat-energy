@@ -6,24 +6,11 @@
   @include indent-reset;
   padding-left: 20px;
   margin-bottom: 34px;
-  display: flex;
-  align-items: center;
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
   text-align: left;
   color: $clr-main;
-
-  &::after {
-    content: "";
-    display: block;
-    margin-left: 22px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    min-width: 3px;
-    height: 3px;
-    background-color: $crl-bg-main;
-  }
 }
 
 .additional__list {
