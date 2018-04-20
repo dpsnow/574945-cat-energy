@@ -1,0 +1,21 @@
+.copyright {
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.copyright__text {
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+  color: $clr-text;
+}
+
+.copyright__logo {
+  display: flex;
+}

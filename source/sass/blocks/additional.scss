@@ -1,0 +1,25 @@
+.additional {
+  padding-top: 28px;
+}
+
+.additional__title {
+  @include indent-reset;
+  padding-left: 20px;
+  margin-bottom: 34px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  text-align: left;
+  color: $clr-main;
+}
+
+.additional__list {
+  @include indent-reset;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.additional__item {
+  min-height: 128px;
+  border-top: 1px solid #d6d6d6;
+}

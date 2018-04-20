@@ -1,0 +1,45 @@
+.data {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+
+  @include indent-reset;
+  width: 100%;
+  & + & {
+    margin-left: 32px;
+  }
+}
+
+.data__title {
+  padding: 13px;
+  min-width: 100%;
+  min-height: 55px;
+  font-size: 24px;
+  line-height: 1;
+  color: $clr-main;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+}
+
+.data__descr {
+  position: relative;
+  // position: absolute;
+  bottom: 10px;
+  // left: 15%;
+  // right: 15%;
+  z-index: 5;
+  padding: 2px;
+  margin: 0;
+  max-width: 90%;
+  width: 70%;
+  min-height: 20px;
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  color: $clr-text;
+  background-color: #f2f2f2;
+}

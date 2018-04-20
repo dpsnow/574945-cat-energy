@@ -1,0 +1,15 @@
+//colors
+$clr-main: #111111;
+$clr-text: #444444;
+$crl-light: #ffffff;
+$crl-bg-main: #68b738;
+$crl-bg-grey: #68b738;
+
+// fonts
+$main-font: "Oswald", "Helvetica", "Arial", sans-serif;
+$sec-font: "Arial", sans-serif;
+
+@mixin indent-reset {
+  padding: 0;
+  margin: 0;
+}

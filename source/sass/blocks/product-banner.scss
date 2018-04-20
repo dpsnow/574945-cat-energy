@@ -1,0 +1,46 @@
+.product-banner {
+  position: relative;
+  padding-top: 28px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    display: block;
+    width: 320px;
+    height: 305px;
+    background-color: $crl-bg-main;
+  }
+}
+
+.product-banner__title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  color: $crl-light;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+}
+
+.product-banner__slogan {
+  @include indent-reset;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $crl-light;
+  text-align: center;
+}
+
+.product-banner__img {
+  display: block;
+  margin: 29px auto 4px auto;
+}
+
+.product-banner__link {
+  margin-bottom: 22px;
+  font-size: 14px;
+  line-height: 18px;
+}

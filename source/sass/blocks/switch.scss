@@ -1,0 +1,40 @@
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.switch__item {
+  font-size: 16px;
+  line-height: 20px;
+  color: $clr-main;
+  cursor: pointer;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
+.switch__scale {
+  position: relative;
+  margin: 0 16px;
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  background-color: $crl-light;
+  border: 1px solid #cdcdcd;
+}
+
+.switch__indicator {
+  position: absolute;
+  top: 25%;
+  display: none;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $crl-bg-main;
+}

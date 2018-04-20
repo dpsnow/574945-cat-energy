@@ -1,0 +1,32 @@
+.other-product {
+  padding-top: 14px;
+  padding-bottom: 17px;
+}
+
+.other-product__name {
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  text-align: left;
+  color: #222222;
+}
+
+.other-product__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.other-product__details {
+  margin-bottom: 14px;
+  width: 100%;
+  font-family: $sec-font;
+  font-size: 14px;
+  line-height: 1;
+  color: $clr-text;
+  border-collapse: collapse;
+}
+
+.other-product__btn {
+
+}

@@ -1,0 +1,12 @@
+.cell {
+  @include indent-reset ;
+
+}
+
+.cell--left {
+  text-align: left;
+}
+
+.cell--right {
+  text-align: right;
+}
