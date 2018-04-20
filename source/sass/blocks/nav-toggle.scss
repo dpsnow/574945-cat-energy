@@ -1,0 +1,17 @@
+.nav-toggle {
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  &--close {
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-close.svg");
+  }
+
+  &--burger {
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-mobile-menu.svg");
+  }
+}
