@@ -1,0 +1,31 @@
+.promo {
+  margin: 0 20px;
+  margin-top: 39px;
+  margin-bottom: 35px;
+  width: 280px;
+  height: 289px;
+  background-color: $crl-bg-main;
+  background-image: url("/img/gift-photo-mobile@1x.jpg");
+}
+
+.promo__title {
+  display: block;
+  padding-top: 65px;
+  margin: auto;
+  width: 56%;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $crl-light;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    background-image: url("/img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
+}
