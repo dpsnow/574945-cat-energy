@@ -8,7 +8,7 @@
 <body>
   <h1 class="visually-hidden">«Кэт Энерджи» — магазин полезных кошачьих кормов для набора массы и похудения.</h1>
   <header class="page-header">
-    <div class="page-header__header  layout">
+    <div class="page-header__header layout">
       <img class="logo logo__header" src="img/logo-mobile.svg" alt="Логотип «Кэт Энерджи»" width="191" height="38">
       <button class="nav-toggle nav-toggle--close" aria-label="Показать/спрятать"></button>
     </div>
@@ -21,11 +21,11 @@
     </nav>
   </header>
   <main>
-    <section class="product-banner layout">
+    <section class="product-banner">
       <h2 class="product-banner__title">Функциональное питание для котов</h2>
       <p class="product-banner__slogan text text--uppercase">Занялся собой? Займись котом!</p>
       <img src="img/index-can-mobile@1x.png" alt="Изображение корма Cat Energy с курицей" class="product-banner__img" width="280" height="270">
-      <a class="product-banner__link page-btn" href="form.html">Подобрать программу</a>
+      <a class="product-banner__link page-btn layout" href="form.html">Подобрать программу</a>
     </section>
     <section class="food-ration layout">
       <h2 class="visually-hidden">Программы питания</h2>
@@ -99,7 +99,7 @@
     </section>
     <section class="location">
       <h2 class="visually-hidden">Наш адрес</h2>
-      <div class="location__text layout">
+      <div class="location__text">
         <p class="location__slogan text text--uppercase">Приглашаем
           <br>
           к сотрудничеству дилеров!</p>
@@ -108,32 +108,34 @@
       <div class="location__map" id="map"></div>
     </section>
   </main>
-  <footer class="page-footer footer layout">
-    <div class="footer__item footer__logo logo">
-      <img class="logo__footer" src="img/logo-footer.svg" alt="Надпись «Кэт Энерджи»" width="128" height="24">
-    </div>
-    <ul class="footer__item social">
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Вконтакте</span>
+  <footer class="page-footer footer">
+    <div class="page-footer__content">
+      <div class="footer__item footer__logo logo">
+        <img class="logo__footer" src="img/logo-footer.svg" alt="Надпись «Кэт Энерджи»" width="128" height="24">
+      </div>
+      <ul class="footer__item social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy/">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__item copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">HTML Academy</span>
+          <img class= "copyright__logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="34">
         </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy/">
-          <span class="visually-hidden">Instagram</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
-          <span class="visually-hidden">Facebook</span>
-        </a>
-      </li>
-    </ul>
-    <div class="footer__item copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="copyright__text">HTML Academy</span>
-        <img class= "copyright__logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="34">
-      </a>
+      </div>
     </div>
   </footer>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
