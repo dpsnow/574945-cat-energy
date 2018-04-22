@@ -1,0 +1,20 @@
+.personal-diet {
+
+}
+
+.personal-diet__title {
+  margin-bottom: 26px;
+}
+
+.personal-diet__text {
+  @include indent-reset;
+  margin-bottom: 39px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: $clr-main;
+}
+
+.personal-diet__form {
+
+}
