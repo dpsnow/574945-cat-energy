@@ -4,8 +4,7 @@
 .location__text {
   display: flex;
   justify-content: space-between;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding: 27px 20px;
   align-items: center;
   font-size: 16px;
   line-height: 20px;
@@ -20,7 +19,7 @@
 
 .location__address {
   width: 100%;
-  font-family: Arial;
+  font-family: $sec-font;
   font-size: 14px;
   line-height: 20px;
   text-align: left;
