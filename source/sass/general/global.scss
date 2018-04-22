@@ -15,10 +15,25 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: red;
-  max-width: 320px;
+}
+
+.page {
+  width: 320px;
+}
+
+@media (min-width: 748px) {
+  .page {
+    width: 748px;
+  }
 }
 
 .layout {
-  // padding: 0 20px;
-  margin: 0 20px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: 748px) {
+  .layout {
+    width: 688px;
+  }
 }
