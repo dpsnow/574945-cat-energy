@@ -1,17 +1,52 @@
 .example {
-  padding-top: 35px;
+  padding-top: 16px;
   padding-bottom: 33px;
   background-color: #f2f2f2;
 }
 
-.example__title {
-  margin-bottom: 23px;
+@media (min-width: 748px) {
+  .example {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 44px;
+    padding-bottom: 64px;
+    border-top: 1px solid red;
+    background-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      height: 462px;
+      background-color: #f2f2f2;
+    }
+  }
 }
 
-/*добавлен line-height: 19px; иначе текст не бьется с PP*/
+@media (min-width: 748px) {
+  .example__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 748px) {
+  .example__title {
+    margin-bottom: 63px;
+  }
+}
+
+
+/*line-height: 19px; иначе текст не бьется с PP*/
 .example__text {
   padding-right: 10px;
-  line-height: 19px;
 }
 
 .example__statistics {
@@ -21,6 +56,13 @@
   justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .example__statistics {
+    flex-basis: 50%;
+    margin-top: 55px;
+  }
+}
+
 .example__cost {
   font-size: 14px;
   line-height: 20px;
@@ -28,8 +70,33 @@
   color: $clr-main;
 }
 
+@media (min-width: 748px) {
+  .example__cost {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: right;
+
+    &--value {
+      margin-top: 10px;
+      display: block;
+    }
+  }
+}
+
+
 .example__slider {
-  flex-shrink: 0;
+  width: 100%;
   margin-top: 35px;
   margin-bottom: 4px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+@media (min-width: $width-table) {
+  .example__slider {
+    margin-top: 90px;
+    padding: 0 100px;
+    height: 523px;
+  }
+}
+

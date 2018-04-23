@@ -19,11 +19,19 @@ body {
 
 .page {
   width: 320px;
+  margin: 0 auto;
+  outline: 3px solid #0a5198;
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .page {
-    width: 748px;
+    width: $width-table;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .page {
+    width: $width-desktop;
   }
 }
 
@@ -32,8 +40,14 @@ body {
   margin: 0 auto;
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .layout {
-    width: 688px;
+    width: 708px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .layout {
+    width: 1220px;
   }
 }

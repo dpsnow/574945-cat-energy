@@ -2,12 +2,22 @@
   font-family: $main-font;
 }
 
+@media (max-width: $mobile-only) {
+  .site-nav--closed {
+    display: none;
+  }
+
+  .site-nav--opened {
+    display: block;
+  }
+}
+
 .site-nav__list {
   @include indent-reset;
   list-style: none;
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .site-nav__list {
     display: flex;
   }
@@ -25,13 +35,26 @@
   border-top: 1px solid #d6d6d6;
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .site-nav__item {
+    padding: 0;
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
     text-align: left;
     color: #222222;
+    border-top: none;
+
+    & + & {
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .site-nav__item {
+    font-size: 20px;
+    line-height: 25px;
 
     & + & {
       margin-left: 35px;

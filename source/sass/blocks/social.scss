@@ -20,6 +20,13 @@
   background-position: center;
 }
 
+@media (min-width: $width-table) {
+  .social__link {
+    width: 29px;
+    height: 29px;
+  }
+}
+
 .social__link--vk {
   background-image: url("../img/icon-vk-mobile.svg");
 }

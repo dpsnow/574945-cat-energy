@@ -1,27 +1,40 @@
 .product-banner {
   position: relative;
-  padding: 0 20px;
   padding-top: 28px;
+  padding-bottom: 22px;
 
   &::after {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -20px;
     z-index: -5;
     display: block;
-    width: 100%;
+    width: 320px;
     height: 305px;
     background-color: $crl-bg-main;
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .product-banner {
-    width: 410px;
-    height: 906px;
-    position: relative;
-    margin-left: 120px;
+    padding-top: 20px;
+    padding-left: 87px;
+    padding-right: 50px;
+    height: 830px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .product-banner {
+    padding-top: 82px;
+    padding-left: 80px;
+    height: 635px;
+
     &::after {
       display: none;
     }
@@ -29,8 +42,9 @@
 }
 
 .product-banner__title {
-  margin: 0 0 25px 0;
+  margin: 0;
   padding: 0;
+  margin-bottom: 25px;
   font-size: 36px;
   line-height: 1;
   font-weight: 400;
@@ -38,8 +52,9 @@
   color: $crl-light;
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .product-banner__title {
+    margin-bottom: 42px;
     font-size: 60px;
     text-align: left;
     color: $clr-main;
@@ -48,6 +63,7 @@
 
 .product-banner__slogan {
   @include indent-reset;
+  margin-bottom: 29px;
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
@@ -55,8 +71,9 @@
   text-align: center;
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .product-banner__slogan {
+    margin-bottom: 48px;
     font-size: 20px;
     text-align: left;
     color: $clr-main;
@@ -65,18 +82,30 @@
 
 .product-banner__img {
   display: block;
-  margin: 29px auto 4px auto;
+  margin-bottom: 4px;
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .product-banner__img {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: -5;
+    width: 100%;
+    height: auto;
   }
 }
 
 .product-banner__link {
-  margin-bottom: 22px;
   font-size: 14px;
   line-height: 18px;
+}
+
+@media (min-width: $width-table) {
+  .product-banner__link {
+    width: 43%;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

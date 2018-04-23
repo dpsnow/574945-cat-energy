@@ -9,11 +9,17 @@
 }
 
 .copyright__text {
-  font-family: Arial;
+  font-family: $sec-font;
   font-size: 16px;
   line-height: 1;
   text-align: left;
   color: $clr-text;
+}
+
+@media (min-width: $width-table) {
+  .copyright__text {
+    margin-right: 16px;
+  }
 }
 
 .copyright__logo {

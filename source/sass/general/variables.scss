@@ -9,6 +9,12 @@ $crl-bg-grey: #f2f2f2;
 $main-font: "Oswald", "Helvetica", "Arial", sans-serif;
 $sec-font: "Arial", sans-serif;
 
+//
+$mobile-only: 767px;
+$width-mobile: 320px;
+$width-table: 768px;
+$width-desktop: 1440px;
+
 @mixin indent-reset {
   padding: 0;
   margin: 0;
