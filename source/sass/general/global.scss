@@ -15,22 +15,20 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: red;
-}
-
-.page {
   width: 320px;
   margin: 0 auto;
   outline: 3px solid #0a5198;
 }
 
+
 @media (min-width: $width-table) {
-  .page {
+  body {
     width: $width-table;
   }
 }
 
 @media (min-width: $width-desktop) {
-  .page {
+  body {
     width: $width-desktop;
   }
 }

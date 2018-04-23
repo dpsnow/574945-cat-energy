@@ -16,7 +16,7 @@
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: $width-table) {
   .nav-toggle {
     display: none;
   }
