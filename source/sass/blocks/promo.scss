@@ -1,18 +1,27 @@
 .promo {
-  margin: 0 20px;
   margin-top: 39px;
   margin-bottom: 35px;
-  width: 280px;
+  padding-top: 65px;
   height: 289px;
   background-color: $crl-bg-main;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: $width-table) {
+  .promo {
+    display: flex;
+    height: 200px;
+    margin-top: 69px;
+    margin-bottom: 76px;
+  }
 }
 
 .promo__title {
-  display: block;
-  padding-top: 65px;
   margin: auto;
-  width: 56%;
+  width: 160px;
+  font-family: $sec-font;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -20,12 +29,30 @@
 
   &::before {
     content: "";
+    flex-shrink: 0;
     display: block;
     width: 55px;
     height: 60px;
     margin: 0 auto;
-    margin-bottom: 65px;
+    margin-bottom: 62px;
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
+    background-size: 55px 60px;
+  }
+}
+
+
+@media (min-width: $width-table) {
+  .promo__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin: 0;
+    text-align: left;
+
+    &::before {
+      margin: 0;
+    }
   }
 }

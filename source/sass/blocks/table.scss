@@ -1,0 +1,35 @@
+.table {
+
+}
+
+.table__row {
+
+}
+
+@media (min-width: $width-table) {
+  .table__row {
+    height: 32px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.table__cell {
+  @include indent-reset;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
+@media (min-width: $width-table) {
+  .table__cell {
+    padding-bottom: 9px;
+    min-width: 96px;
+    vertical-align: bottom;
+  }
+}
+

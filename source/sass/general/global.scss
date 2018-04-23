@@ -9,14 +9,13 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: $main-font;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: red;
   width: 320px;
-  margin: 0 auto;
   outline: 3px solid #0a5198;
 }
 
@@ -35,7 +34,10 @@ body {
 
 .layout {
   width: 280px;
-  margin: 0 auto;
+  margin-top: inherit;
+  margin-bottom: inherit;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: $width-table) {

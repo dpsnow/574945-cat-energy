@@ -1,5 +1,5 @@
 .additional {
-  padding-top: 28px;
+  padding-top: 29px;
 }
 
 .additional__title {
@@ -13,13 +13,35 @@
   color: $clr-main;
 }
 
+@media (min-width: $width-table) {
+  .additional__title {
+    font-size: 36px;
+    margin-bottom: 80px;
+    padding-left: 0;
+  }
+}
+
+
 .additional__list {
-  @include indent-reset;
-  padding: 0 20px;
+  padding: 0;
+  margin: 0 auto;
   list-style: none;
+  border-top: 1px solid #d6d6d6;
+}
+
+@media (min-width: $width-table) {
+  .additional__list {
+    border-top: none;
+  }
 }
 
 .additional__item {
   min-height: 128px;
-  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+@media (min-width: $width-table) {
+  .additional__item {
+    min-height: 139px;
+  }
 }
