@@ -1,20 +1,51 @@
 .personal-diet {
-
+  padding-top: 15px;
 }
 
+@media (min-width: $width-table) {
+  .personal-diet {
+    padding-top: 20px;
+  }
+}
+
+
 .personal-diet__title {
+  margin-left: 20px;
   margin-bottom: 26px;
 }
 
+@media (min-width: $width-table) {
+  .personal-diet__title {
+    margin-left: 29px;
+    margin-bottom: 56px;
+  }
+}
+
+
 .personal-diet__text {
   @include indent-reset;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
+  margin-left: 20px;
   font-size: 14px;
   line-height: 18px;
   text-align: left;
   color: $clr-main;
 }
 
-.personal-diet__form {
-
+@media (min-width: $width-table) {
+  .personal-diet__text {
+    margin-bottom: 65px;
+    margin-left: 70px;
+    width: 49%;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
+
+@media (min-width: $width-table) {
+  .personal-diet__form {
+    margin-left: 70px;
+    margin-right: 67px;
+  }
+}
+

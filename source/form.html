@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 <body>
   <h1 class="visually-hidden">Форма для подбора индивидуальной программы питания для вашего кота</h1>
-  <header class="page-header">
-    <div class="page-header__header">
+  <header class="page-header page-header--nojs layout">
+    <div class="page-header__logo">
       <img class="logo logo__header" src="img/logo-mobile.svg" alt="Логотип «Кэт Энерджи»" width="191" height="38">
-      <button class="nav-toggle nav-toggle--close" aria-label="Показать/спрятать"></button>
     </div>
-    <nav class="page-header__nav site-nav">
+    <button class="nav-toggle nav-toggle--burger" aria-label="Показать/спрятать" type="button"></button>
+    <nav class="page-header__nav site-nav site-nav--closed">
       <ul class="site-nav__list">
         <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
         <li class="site-nav__item"><a href="catalog.html" class="site-nav__link">Каталог продукции</a></li>
@@ -21,7 +22,7 @@
     </nav>
   </header>
   <main>
-    <section class="personal-diet layout">
+    <section class="personal-diet">
       <h2 class="personal-diet__title text text--title">Подбор программы</h2>
       <p class="personal-diet__text text text--uppercase">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="personal-diet__form form-diet" action="https://echo.htmlacademy.ru" method="post">
@@ -56,7 +57,7 @@
           </label>
         </fieldset>
         <fieldset class="form-diet__group">
-          <h3 class="form-diet__subtitle text text--special">Контактные данные <br>(владельца кота)</h3>
+          <h3 class="form-diet__subtitle text text--special">Контактные данные (владельца кота)</h3>
           <label class="form-diet__item field">
             <span class="field__label text text--uppercase">E-mail:*</span>
             <input class="field__text" type="email" name="email" value="kuklachev@gmail.com" required>
@@ -68,28 +69,30 @@
         </fieldset>
         <fieldset class="form-diet__group">
           <h3 class="form-diet__subtitle text text--special">Комментарий</h3>
-          <textarea class="form-diet__item field__text" name="message" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="form-diet__item field__text" name="message" cols="30" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form-diet__group">
           <h3 class="form-diet__subtitle text text--special">Дополнительно</h3>
-          <label class="form-diet__item field">
-            <input class="field__checkbox visually-hidden" type="checkbox" name="other-sweetener" checked>
-            <span class="field__label field__label--checkbox text text--uppercase">Сахарозаменитель</span>
-          </label>
-          <label class="form-diet__item field">
-            <input class="field__checkbox visually-hidden" type="checkbox" name="other-water">
-            <span class="field__label field__label--checkbox text text--uppercase">Питьевая вода</span>
-          </label>
-          <label class="form-diet__item field">
-            <input class="field__checkbox visually-hidden" type="checkbox" name="other-milk">
-            <span class="field__label field__label--checkbox text text--uppercase">Молоко</span>
-          </label>
-          <label class="form-diet__item field">
-            <input class="field__checkbox visually-hidden" type="checkbox" name="other-vitamins">
-            <span class="field__label field__label--checkbox text text--uppercase">Витамины</span>
-          </label>
+          <div class="form-diet__list-of-extras">
+            <label class="form-diet__item field">
+              <input class="field__checkbox visually-hidden" type="checkbox" name="other-sweetener" checked>
+              <span class="field__label field__label--checkbox text text--uppercase">Сахарозаменитель</span>
+            </label>
+            <label class="form-diet__item field">
+              <input class="field__checkbox visually-hidden" type="checkbox" name="other-water">
+              <span class="field__label field__label--checkbox text text--uppercase">Питьевая вода</span>
+            </label>
+            <label class="form-diet__item field">
+              <input class="field__checkbox visually-hidden" type="checkbox" name="other-milk">
+              <span class="field__label field__label--checkbox text text--uppercase">Молоко</span>
+            </label>
+            <label class="form-diet__item field">
+              <input class="field__checkbox visually-hidden" type="checkbox" name="other-vitamins">
+              <span class="field__label field__label--checkbox text text--uppercase">Витамины</span>
+            </label>
+          </div>
         </fieldset>
-        <div class="form-diet__group">
+        <div class="form-diet__group form-diet__group--footer">
           <input class="form-diet__btn page-btn" type="submit" value="Отправить заявку">
           <p class="form-diet__text">* — Обязательные поля</p>
         </div>
@@ -101,11 +104,13 @@
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="location__text">
         <p class="location__slogan text text--uppercase">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="location__address text text--content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="location__address text text--content">ул. Большая Конюшенная, д. 19/8
+          <span class="location__address--city">Санкт-Петербург</span>
+        </p>
       </div>
       <div class="location__map" id="map"></div>
     </section>
-    <div class="page-footer__content">
+    <div class="page-footer__content footer layout">
       <div class="footer__item footer__logo logo">
         <img class="logo__footer" src="img/logo-footer.svg" alt="Надпись «Кэт Энерджи»" width="128" height="24">
       </div>

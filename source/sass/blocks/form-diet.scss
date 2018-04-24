@@ -1,36 +1,92 @@
 .form-diet {
+  padding-bottom: 10px;
+}
 
+@media (min-width: $width-table) {
+  .form-diet {
+    padding-bottom: 70px;
+  }
 }
 
 .form-diet__group {
   @include indent-reset;
-  border: none;
+  margin: 0;
+  padding: 0 20px;
   display: block;
+  border: none;
 
   &--diet {
+    padding: 22px 20px;
     border: 1px solid #ededed;
   }
+
+  &--extra {
+
+  }
+
+  &--footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 
   & + & {
     margin-top: 23px;
   }
 }
 
+
+@media (min-width: $width-table) {
+  .form-diet__group {
+    padding: 0;
+
+    &--diet {
+      padding: 25px 28px;
+    }
+
+    &--footer {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
+
+.form-diet__list-of-extras {
+
+}
+
+@media (min-width: $width-table) {
+  .form-diet__list-of-extras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
 .form-diet__item {
-  width: 100%;
 
   &--diet {
     border: solid 1px #ededed;
   }
+
 
   & ~ & {
     margin-top: 14px;
   }
 }
 
+@media (min-width: $width-table) {
+  .form-diet__item {
+    flex-basis: 50%;
+  }
+}
+
 .form-diet__subtitle {
   @include indent-reset;
-  margin-right: -20px;
+  margin-top: 6px;
+  margin-bottom: 34px;
   font-size: 24px;
   line-height: 24px;
   text-align: left;
@@ -38,15 +94,30 @@
   color: $clr-main;
 }
 
+@media (min-width: $width-table) {
+  .form-diet__subtitle {
+    margin-left: -70px;
+    margin-bottom: 70px;
+  }
+}
+
 .form-diet__btn {
   width: 100%;
+  margin-top: 15px;
+}
+
+@media (min-width: $width-table) {
+  .form-diet__btn {
+    width: 45%;
+    margin-right: 60px;
+  }
 }
 
 .form-diet__text {
   @include indent-reset;
+  margin: 23px 0;
   font-family: $sec-font;
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
   color: $clr-text;
 }
