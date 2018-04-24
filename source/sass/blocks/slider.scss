@@ -5,8 +5,7 @@
 
 .slider__list {
   @include indent-reset;
-  margin: 0 auto;
-  width: 100%;
+  margin: auto;
   list-style: none;
 }
 
@@ -15,8 +14,6 @@
 }
 
 .slider__photo {
-  width: 100%;
-  height: auto;
 }
 
 
