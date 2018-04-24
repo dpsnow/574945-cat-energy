@@ -13,71 +13,32 @@
     width: 320px;
     height: 305px;
     background-color: $crl-bg-main;
-  }
-}
-
-@media (min-width: $width-table) {
-  .product-banner {
-    padding-top: 20px;
-    padding-left: 87px;
-    padding-right: 50px;
-    height: 830px;
-
-    &::after {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: $width-desktop) {
-  .product-banner {
-    padding-top: 82px;
-    padding-left: 80px;
-    height: 635px;
-
-    &::after {
-      display: none;
-    }
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
 .product-banner__title {
   margin: 0;
-  padding: 0;
   margin-bottom: 25px;
+  padding: 0;
+  font-weight: 400;
   font-size: 36px;
   line-height: 1;
-  font-weight: 400;
   text-align: center;
   color: $crl-light;
-}
-
-@media (min-width: $width-table) {
-  .product-banner__title {
-    margin-bottom: 42px;
-    font-size: 60px;
-    text-align: left;
-    color: $clr-main;
-  }
 }
 
 .product-banner__slogan {
   @include indent-reset;
+
   margin-bottom: 29px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1;
-  font-weight: 400;
-  color: $crl-light;
   text-align: center;
-}
-
-@media (min-width: $width-table) {
-  .product-banner__slogan {
-    margin-bottom: 48px;
-    font-size: 20px;
-    text-align: left;
-    color: $clr-main;
-  }
+  color: $crl-light;
 }
 
 .product-banner__img {
@@ -85,26 +46,90 @@
   margin-bottom: 4px;
 }
 
-@media (min-width: $width-table) {
-  .product-banner__img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -5;
-    width: 100%;
-    height: auto;
-  }
-}
-
 .product-banner__link {
   font-size: 14px;
   line-height: 18px;
 }
 
+
 @media (min-width: $width-table) {
+  .product-banner {
+    height: 830px;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-left: 89px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .product-banner__title {
+    width: 415px;
+    margin-bottom: 42px;
+    font-size: 60px;
+    text-align: left;
+    color: $clr-main;
+  }
+
+  .product-banner__slogan {
+    margin-bottom: 47px;
+    font-size: 20px;
+    text-align: left;
+    color: $clr-main;
+  }
+
+  .product-banner__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -5;
+  }
+
   .product-banner__link {
     width: 43%;
+    min-height: 53px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+
+@media (min-width: $width-desktop) {
+  .product-banner {
+    height: 635px;
+    // position: static;
+    padding-top: 82px;
+    padding-left: 80px;
+
+    &::after {
+      top: -140px;
+      right: -110px;
+      left: auto;
+      display: block;
+      width: 720px;
+      height: 696px;
+      background-position: top right;
+    }
+  }
+
+  .product-banner__img {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    bottom: auto;
+    left: auto;
+    z-index: 5;
+  }
+
+  .product-banner__slogan {
+    margin-bottom: 53px;
+  }
+
+  .product-banner__link {
+    width: 21%;
+    min-height: 53px;
     font-size: 20px;
     line-height: 20px;
   }
