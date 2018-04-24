@@ -26,8 +26,8 @@
       <h2 class="personal-diet__title text text--title">Подбор программы</h2>
       <p class="personal-diet__text text text--uppercase">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="personal-diet__form form-diet" action="https://echo.htmlacademy.ru" method="post">
+        <h3 class="visually-hidden">Данные кота</h3>
         <fieldset class="form-diet__group">
-          <h3 class="visually-hidden">Данные кота</h3>
           <label class="form-diet__item field ">
             <span class="field__label text text--uppercase">Имя:*</span>
             <input class="field__text" type="text" name="cat-name" value= "Барсик" required>
@@ -41,8 +41,8 @@
             <input class="field__text" type="number" name="cat-age" value= "7">
           </label>
         </fieldset>
+        <h3 class="visually-hidden">Выберите диету</h3>
         <fieldset class="form-diet__group form-diet__group--diet">
-          <h3 class="visually-hidden">Выберите диету</h3>
           <label class="form-diet__item field">
             <input class="field__radio visually-hidden" type="radio" name="diet" value="weight-loss" checked>
             <span class="field__label field__label--radio text text--uppercase">Похудение</span>
@@ -56,8 +56,8 @@
             <span class="field__label field__label--radio text text--uppercase">Не знаю (Нужен ваш совет)</span>
           </label>
         </fieldset>
+        <h3 class="form-diet__subtitle text text--special">Контактные данные (владельца кота)</h3>
         <fieldset class="form-diet__group">
-          <h3 class="form-diet__subtitle text text--special">Контактные данные (владельца кота)</h3>
           <label class="form-diet__item field">
             <span class="field__label text text--uppercase">E-mail:*</span>
             <input class="field__text" type="email" name="email" value="kuklachev@gmail.com" required>
@@ -67,8 +67,8 @@
             <input class="field__text" type="tel" name="number" value="8 (960) 900-60-90" required>
           </label>
         </fieldset>
+        <h3 class="form-diet__subtitle text text--special">Комментарий</h3>
         <fieldset class="form-diet__group">
-          <h3 class="form-diet__subtitle text text--special">Комментарий</h3>
           <textarea class="form-diet__item field__text" name="message" cols="30" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form-diet__group">
@@ -141,6 +141,7 @@
   </footer>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/map.js" type="text/javascript"></script>
+  <script src="js/nav-toggle.js" type="text/javascript"></script>
 </body>
 
 </html>
