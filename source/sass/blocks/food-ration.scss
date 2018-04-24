@@ -18,3 +18,21 @@
     }
   }
 }
+
+
+@media (min-width: $width-desktop) {
+  .food-ration {
+    display: flex;
+    // justify-content: space-between;
+  }
+
+  .food-ration__item {
+    width: 570px;
+    min-height: 372px;
+
+    & + & {
+      margin-top: 0;
+      margin-left: 80px;
+    }
+  }
+}
