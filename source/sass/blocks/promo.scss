@@ -1,8 +1,6 @@
 .promo {
-  margin-top: 39px;
-  margin-bottom: 35px;
   padding-top: 65px;
-  height: 289px;
+
   background-color: $crl-bg-main;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-size: cover;
@@ -12,9 +10,7 @@
 @media (min-width: $width-table) {
   .promo {
     display: flex;
-    height: 200px;
-    margin-top: 69px;
-    margin-bottom: 76px;
+
   }
 }
 
