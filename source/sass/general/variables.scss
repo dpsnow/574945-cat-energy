@@ -3,13 +3,24 @@ $clr-main: #111111;
 $clr-text: #444444;
 $crl-light: #ffffff;
 $crl-bg-main: #68b738;
-$crl-bg-grey: #68b738;
+$crl-bg-grey: #f2f2f2;
 
 // fonts
 $main-font: "Oswald", "Helvetica", "Arial", sans-serif;
 $sec-font: "Arial", sans-serif;
 
+//
+$mobile-only: 767px;
+$width-mobile: 320px;
+$width-table: 768px;
+$width-desktop: 1440px;
+
 @mixin indent-reset {
   padding: 0;
-  margin: 0;
+  // margin: 0;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  // margin-left: inherit;
+  // margin-right: inherit;
 }

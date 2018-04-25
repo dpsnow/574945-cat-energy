@@ -2,17 +2,18 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
-<body>
+<body class="page">
   <h1 class="visually-hidden">«Кэт Энерджи» — магазин полезных кошачьих кормов для набора массы и похудения.</h1>
-  <header class="page-header">
-    <div class="page-header__header  layout">
+  <header class="page-header page-header--nojs layout">
+    <div class="page-header__logo">
       <img class="logo logo__header" src="img/logo-mobile.svg" alt="Логотип «Кэт Энерджи»" width="191" height="38">
-      <button class="nav-toggle nav-toggle--close" aria-label="Показать/спрятать"></button>
     </div>
-    <nav class="page-header__nav site-nav">
+    <button class="nav-toggle nav-toggle--burger" aria-label="Показать/спрятать" type="button"></button>
+    <nav class="page-header__nav site-nav site-nav--closed site-nav--index">
       <ul class="site-nav__list">
         <li class="site-nav__item"><a class="site-nav__link site-nav__link--active">Главная</a></li>
         <li class="site-nav__item"><a href="catalog.html" class="site-nav__link">Каталог продукции</a></li>
@@ -29,13 +30,13 @@
     </section>
     <section class="food-ration layout">
       <h2 class="visually-hidden">Программы питания</h2>
-      <div class="food-ration__item card">
-        <h3 class="card__title card__title--loss text text--uppercase">Похудение</h3>
+      <div class="food-ration__item card card--loss">
+        <h3 class="card__title text text--uppercase">Похудение</h3>
         <p class="card__descr text text--content">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a href="catalog.html" class="card__link text text--uppercase">Каталог Slim</a>
       </div>
-      <div class="food-ration__item card">
-        <h3 class="card__title card__title--gain text text--uppercase">Набор массы</h3>
+      <div class="food-ration__item card card--gain">
+        <h3 class="card__title text text--uppercase">Набор массы</h3>
         <p class="card__descr text text--content">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
         <a href="catalog.html" class="card__link text text--uppercase">Каталог pro</a>
       </div>
@@ -75,17 +76,17 @@
             <dd class="data__descr">затрачено времени</dd>
           </dl>
         </div>
-        <p class="example__cost text text--uppercase">Затраты на питание: 15 000 руб.</p>
+        <p class="example__cost text text--uppercase">Затраты на питание: <span class="example__cost--value">15&nbsp;000&nbsp;руб.</span></p>
       </div>
       <div class="example__slider slider">
         <input class="slider__switch--to-1 visually-hidden" id="switch-before" type="radio" name="switch-photo" value="before" checked>
         <input class="slider__switch--to-2 visually-hidden" id="switch-after" type="radio" name="switch-photo" value="after">
         <ul class="slider__list">
           <li class="slider__item slider__item--before">
-            <img class="slider__photo-before" src="img/before-mobile@1x.png" alt="Фотография кота до диеты">
+            <img class="slider__photo" src="img/before-mobile@1x.png" alt="Фотография кота до диеты">
           </li>
           <li class="slider__item slider__item--after">
-            <img class="slider__photo-after" src="img/after-mobile@1x.png" alt="Фотография кота после диеты">
+            <img class="slider__photo" src="img/after-mobile@1x.png" alt="Фотография кота после диеты">
           </li>
         </ul>
         <div class="slider__controls switch">
@@ -99,44 +100,49 @@
     </section>
     <section class="location">
       <h2 class="visually-hidden">Наш адрес</h2>
-      <div class="location__text layout">
+      <div class="location__text">
         <p class="location__slogan text text--uppercase">Приглашаем
           <br>
           к сотрудничеству дилеров!</p>
-        <p class="location__address text text--content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="location__address text text--content">ул. Большая Конюшенная, д. 19/8
+          <span class="location__address--city">Санкт-Петербург</span>
+      </p>
       </div>
       <div class="location__map" id="map"></div>
     </section>
   </main>
-  <footer class="page-footer footer layout">
-    <div class="footer__item footer__logo logo">
-      <img class="logo__footer" src="img/logo-footer.svg" alt="Надпись «Кэт Энерджи»" width="128" height="24">
-    </div>
-    <ul class="footer__item social">
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Вконтакте</span>
+  <footer class="page-footer">
+    <div class="page-footer__content footer layout">
+      <div class="footer__item footer__logo logo">
+        <img class="logo__footer" src="img/logo-footer.svg" alt="Надпись «Кэт Энерджи»" width="128" height="24">
+      </div>
+      <ul class="footer__item social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy/">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__item copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">HTML Academy</span>
+          <img class= "copyright__logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="34">
         </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy/">
-          <span class="visually-hidden">Instagram</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
-          <span class="visually-hidden">Facebook</span>
-        </a>
-      </li>
-    </ul>
-    <div class="footer__item copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="copyright__text">HTML Academy</span>
-        <img class= "copyright__logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="34">
-      </a>
+      </div>
     </div>
   </footer>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/map.js" type="text/javascript"></script>
+  <script src="js/nav-toggle.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,5 +1,49 @@
 .field {
-  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.field__label {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: #222222;
+  white-space: nowrap;
+}
+
+
+
+.field__label--radio {
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: $crl-light;
+    box-shadow: 0 0 0 1px #cdcdcd;
+  }
+}
+
+.field__label--checkbox {
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 16px;
+    width: 28px;
+    height: 28px;
+    background-color: $crl-light;
+    box-shadow: 0 0 0 1px #cdcdcd;
+  }
+}
+
+.field__text {
+  padding: 12px 12px 12px 14px;
   width: 100%;
   min-height: 45px;
   font-family: inherit;
@@ -10,7 +54,6 @@
   text-transform: uppercase;
   border: solid 1px #e3e3e3;
 
-
   &:hover,
   &:focus {
     border: solid 1px #cdcdcd;
@@ -20,8 +63,21 @@
     border: solid 2px #444444;
   }
 
-  &:invalid  {
+  &:invalid {
     border: solid 2px #ff8282;
   }
 }
 
+
+.field__radio:checked + .field__label--radio::before {
+  border: 8px solid $crl-light;
+  background-color: $crl-bg-main;
+  box-shadow: 0 0 0 1px #cdcdcd
+}
+
+.field__checkbox:checked + .field__label--checkbox::before {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 21px 16px;
+}

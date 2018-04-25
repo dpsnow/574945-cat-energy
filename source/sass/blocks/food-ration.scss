@@ -1,10 +1,38 @@
 .food-ration {
-
 }
 
 .food-ration__item {
-  // margin-bottom: 20px;
+  min-height: 266px;
+
   & + & {
     margin-top: 20px;
+  }
+}
+
+@media (min-width: $width-table) {
+  .food-ration__item {
+    min-height: 372px;
+
+    & + & {
+      margin-top: 30px;
+    }
+  }
+}
+
+
+@media (min-width: $width-desktop) {
+  .food-ration {
+    display: flex;
+    // justify-content: space-between;
+  }
+
+  .food-ration__item {
+    width: 570px;
+    min-height: 372px;
+
+    & + & {
+      margin-top: 0;
+      margin-left: 80px;
+    }
   }
 }

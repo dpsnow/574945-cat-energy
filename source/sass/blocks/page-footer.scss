@@ -2,10 +2,24 @@
   background-color: #f2f2f2;
 }
 
-.page-footer__map {
+@media (min-width: $width-table) {
+  .page-footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
+
+.page-footer__map {
+  width: 100%;
 }
 
 .page-footer__content {
 
+}
+
+@media (min-width: $width-table) {
+  .page-footer__content {
+    min-height: 150px;
+  }
 }

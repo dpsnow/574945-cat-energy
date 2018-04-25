@@ -1,9 +1,11 @@
 .slider {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .slider__list {
   @include indent-reset;
+  margin: auto;
   list-style: none;
 }
 
@@ -11,18 +13,21 @@
   display: none;
 }
 
-.slider__photo-before {
-
+.slider__photo {
 }
 
-.slider__photo-after {
-
-}
 
 .slider__controls {
   margin-top: 30px;
   text-align: center;
 }
+
+@media (min-width: $width-table) {
+  .slider__controls {
+    margin-top: auto;
+  }
+}
+
 
 /* Переключение*/
 .slider__switch--to-1:checked ~ .slider__list .slider__item--before {
@@ -32,7 +37,6 @@
 .slider__switch--to-1:checked ~ .switch .switch__scale .switch__indicator {
   display: block;
   left: 6px;
-  right: 0;
 }
 
 .slider__switch--to-2:checked ~ .slider__list .slider__item--after {
@@ -42,4 +46,13 @@
 .slider__switch--to-2:checked ~ .switch .switch__scale .switch__indicator {
   display: block;
   right: 6px;
+}
+
+
+@media (min-width: $width-table) {
+  .slider__switch--to-1:checked ~ .switch .switch__scale .switch__indicator,
+  .slider__switch--to-2:checked ~ .switch .switch__scale .switch__indicator {
+    left: 0;
+    right: 0;
+  }
 }

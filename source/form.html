@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 <body>
   <h1 class="visually-hidden">Форма для подбора индивидуальной программы питания для вашего кота</h1>
-  <header class="page-header">
-    <div class="logo page-header__item">
-      <a href="index.html">
-        <img class="logo__header" src="img/logo-mobile.svg" alt="Логотип «Кэт Энерджи»" width="191" height="38">
-      </a>
+  <header class="page-header page-header--nojs layout">
+    <div class="page-header__logo">
+      <img class="logo logo__header" src="img/logo-mobile.svg" alt="Логотип «Кэт Энерджи»" width="191" height="38">
     </div>
-    <button class="nav-toggle nav-toggle--close" aria-label="Показать/спрятать"></button>
-    <nav class="page-header__item site-nav">
+    <button class="nav-toggle nav-toggle--burger" aria-label="Показать/спрятать" type="button"></button>
+    <nav class="page-header__nav site-nav site-nav--closed">
       <ul class="site-nav__list">
         <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
         <li class="site-nav__item"><a href="catalog.html" class="site-nav__link">Каталог продукции</a></li>
@@ -25,50 +24,95 @@
   <main>
     <section class="personal-diet">
       <h2 class="personal-diet__title text text--title">Подбор программы</h2>
-      <p class="personal-diet__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <p class="personal-diet__text text text--uppercase">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="personal-diet__form form-diet" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form-diet__item">
-          <h3 class="visually-hidden">Данные кота</h3>
-          <label class="form-diet__label text text--uppercase">Имя:*<input class="field field--text" type="text" name="cat-name" value= "Барсик" required></label>
-          <label class="form-diet__label text text--uppercase">Вес (кг):*<input class="field field--text" type="number" name="cat-weight" value= "7" required></label>
-          <label class="form-diet__label text text--uppercase">Возраст (лет):<input class="field field--text" type="number" name="cat-age" value= "7"></label>
+        <h3 class="visually-hidden">Данные кота</h3>
+        <fieldset class="form-diet__group">
+          <label class="form-diet__item field ">
+            <span class="field__label text text--uppercase">Имя:*</span>
+            <input class="field__text" type="text" name="cat-name" value= "Барсик" required>
+          </label>
+          <label class="form-diet__item field">
+            <span class="field__label text text--uppercase">Вес (кг):*</span>
+            <input class="field__text" type="number" name="cat-weight" value= "7" required>
+          </label>
+          <label class="form-diet__item field">
+            <span class="field__label text text--uppercase">Возраст (лет):</span>
+            <input class="field__text" type="number" name="cat-age" value= "7">
+          </label>
         </fieldset>
-        <fieldset class="form-diet__item">
-          <h3 class="visually-hidden">Выберите диету</h3>
-          <label class="form-diet__label text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="weight-loss" checked>Похудение</label>
-          <label class="form-diet__label text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="weight-gain">Набор массы</label>
-          <label class="form-diet__label text text--uppercase"><input class="input input--radio" type="radio" name="diet" value="need-help">Не знаю (Нужен ваш совет)</label>
+        <h3 class="visually-hidden">Выберите диету</h3>
+        <fieldset class="form-diet__group form-diet__group--diet">
+          <label class="form-diet__item field">
+            <input class="field__radio visually-hidden" type="radio" name="diet" value="weight-loss" checked>
+            <span class="field__label field__label--radio text text--uppercase">Похудение</span>
+          </label>
+          <label class="form-diet__item field">
+            <input class="field__radio visually-hidden" type="radio" name="diet" value="weight-gain">
+            <span class="field__label field__label--radio text text--uppercase">Набор массы</span>
+          </label>
+          <label class="form-diet__item field">
+            <input class="field__radio visually-hidden" type="radio" name="diet" value="need-help">
+            <span class="field__label field__label--radio text text--uppercase">Не знаю (Нужен ваш совет)</span>
+          </label>
         </fieldset>
-        <fieldset class="form-diet__item">
-          <h3 class="form-diet__subtitle text text--special">Контактные данные <br>(владельца кота)</h3>
-          <label class="form-diet__label text text--uppercase">E-mail:*<input class="field field--text" type="email" name="email" value="kuklachev@gmail.com" required></label>
-          <label class="form-diet__label text text--uppercase">Телефон:*<input class="field field--text" type="tel" name="number" value="8 (960) 900-60-90" required></label>
-          <label class="form-diet__subtitle">Комментарий<textarea class="form-diet__field field field--textarea" name="message" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea></label>
+        <h3 class="form-diet__subtitle text text--special">Контактные данные (владельца кота)</h3>
+        <fieldset class="form-diet__group">
+          <label class="form-diet__item field">
+            <span class="field__label text text--uppercase">E-mail:*</span>
+            <input class="field__text" type="email" name="email" value="kuklachev@gmail.com" required>
+          </label>
+          <label class="form-diet__item field">
+            <span class="field__label text text--uppercase">Телефон:*</span>
+            <input class="field__text" type="tel" name="number" value="8 (960) 900-60-90" required>
+          </label>
         </fieldset>
-        <fieldset class="form-diet__item">
+        <h3 class="form-diet__subtitle text text--special">Комментарий</h3>
+        <fieldset class="form-diet__group">
+          <textarea class="form-diet__item field__text" name="message" cols="30" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="form-diet__group">
           <h3 class="form-diet__subtitle text text--special">Дополнительно</h3>
-          <label class="form-diet__label text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-sweetener" checked>Сахарозаменитель</label>
-          <label class="form-diet__label text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-water">Питьевая вода</label>
-          <label class="form-diet__label text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-milk">Молоко</label>
-          <label class="form-diet__label text text--uppercase"><input class="input input--checkbox" type="checkbox" name="other-vitamins">Витамины</label>
+          <div class="form-diet__list-of-extras">
+            <label class="form-diet__item field">
+              <input class="field__checkbox visually-hidden" type="checkbox" name="other-sweetener" checked>
+              <span class="field__label field__label--checkbox text text--uppercase">Сахарозаменитель</span>
+            </label>
+            <label class="form-diet__item field">
+              <input class="field__checkbox visually-hidden" type="checkbox" name="other-water">
+              <span class="field__label field__label--checkbox text text--uppercase">Питьевая вода</span>
+            </label>
+            <label class="form-diet__item field">
+              <input class="field__checkbox visually-hidden" type="checkbox" name="other-milk">
+              <span class="field__label field__label--checkbox text text--uppercase">Молоко</span>
+            </label>
+            <label class="form-diet__item field">
+              <input class="field__checkbox visually-hidden" type="checkbox" name="other-vitamins">
+              <span class="field__label field__label--checkbox text text--uppercase">Витамины</span>
+            </label>
+          </div>
         </fieldset>
-        <input type="submit" value="Отправить заявку">
-        <p class="form-diet__text">* — Обязательные поля</p>
+        <div class="form-diet__group form-diet__group--footer">
+          <input class="form-diet__btn page-btn" type="submit" value="Отправить заявку">
+          <p class="form-diet__text">* — Обязательные поля</p>
+        </div>
       </form>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer footer">
     <section class="page-footer__map location">
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="location__text">
         <p class="location__slogan text text--uppercase">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="location__address text text--content">ул. Большая Конюшенная, д. 19/8
+          <span class="location__address--city">Санкт-Петербург</span>
+        </p>
       </div>
       <div class="location__map" id="map"></div>
     </section>
-    <div class="page-footer__content footer">
-      <div class="footer__item logo">
-        <img class="logo__name" src="img/logo-footer.svg" alt="Надпись «Кэт Энерджи»" width="101" height="18">
+    <div class="page-footer__content footer layout">
+      <div class="footer__item footer__logo logo">
+        <img class="logo__footer" src="img/logo-footer.svg" alt="Надпись «Кэт Энерджи»" width="128" height="24">
       </div>
       <ul class="footer__item social">
         <li class="social__item">
@@ -88,15 +132,16 @@
         </li>
       </ul>
       <div class="footer__item copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="34">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">HTML Academy</span>
+          <img class= "copyright__logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="34" height="34">
         </a>
       </div>
     </div>
   </footer>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/map.js" type="text/javascript"></script>
+  <script src="js/nav-toggle.js" type="text/javascript"></script>
 </body>
 
 </html>

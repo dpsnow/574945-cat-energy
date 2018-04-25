@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+@media (min-width: $width-table) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .footer__item {
   min-height: 62px;
   padding-top: 22px;
@@ -12,8 +21,17 @@
   }
 }
 
+@media (min-width: $width-table) {
+  .footer__item {
+
+    & + & {
+    border-top: none;
+    }
+  }
+}
+
 .footer__logo {
-  padding-top: 39px;
-  padding-bottom: 30px;
+  padding-top: 37px;
+  padding-bottom: 29px;
 }
 
