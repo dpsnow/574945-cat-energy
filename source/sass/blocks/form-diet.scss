@@ -2,23 +2,21 @@
   padding-bottom: 10px;
 }
 
-@media (min-width: $width-table) {
-  .form-diet {
-    padding-bottom: 70px;
-  }
+.form-diet__descr {
+  @include indent-reset;
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: $clr-main;
 }
 
 .form-diet__group {
   @include indent-reset;
   margin: 0;
-  padding: 0 20px;
+  // padding: 0 20px;
   display: block;
   border: none;
-
-  &--diet {
-    padding: 22px 20px;
-    border: 1px solid #ededed;
-  }
 
   &--extra {
 
@@ -28,41 +26,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 26px;
   }
 
-
-  & + & {
-    margin-top: 23px;
-  }
+  // & ~ & {
+  //   margin-top: 23px;
+  // }
 }
 
-
-@media (min-width: $width-table) {
-  .form-diet__group {
-    padding: 0;
-
-    &--diet {
-      padding: 25px 28px;
-    }
-
-    &--footer {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      align-items: center;
-    }
-  }
+.form-diet__main-info--diet {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 22px 20px;
+  border: 1px solid #ededed;
 }
+
 
 .form-diet__list-of-extras {
 
-}
-
-@media (min-width: $width-table) {
-  .form-diet__list-of-extras {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
 }
 
 .form-diet__item {
@@ -77,15 +58,9 @@
   }
 }
 
-@media (min-width: $width-table) {
-  .form-diet__item {
-    flex-basis: 50%;
-  }
-}
-
 .form-diet__subtitle {
   @include indent-reset;
-  margin-top: 6px;
+  margin-top: 30px;
   margin-bottom: 34px;
   font-size: 24px;
   line-height: 24px;
@@ -94,23 +69,9 @@
   color: $clr-main;
 }
 
-@media (min-width: $width-table) {
-  .form-diet__subtitle {
-    margin-left: -70px;
-    margin-bottom: 70px;
-  }
-}
-
 .form-diet__btn {
   width: 100%;
   margin-top: 15px;
-}
-
-@media (min-width: $width-table) {
-  .form-diet__btn {
-    width: 45%;
-    margin-right: 60px;
-  }
 }
 
 .form-diet__text {
@@ -120,4 +81,151 @@
   font-size: 14px;
   line-height: 16px;
   color: $clr-text;
+}
+
+
+.form-diet__main-info {
+  & ~ & {
+    margin-top: 23px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: $width-table) {
+  .form-diet {
+    padding-bottom: 70px;
+  }
+
+  .form-diet__descr {
+    margin-bottom: 63px;
+    width: 325px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form-diet__group {
+    padding: 0;
+
+    &--footer {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 6px;
+    }
+  }
+
+  .form-diet__main-info {
+    & ~ & {
+      margin-top: 72px;
+    }
+
+    &--diet {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 25px 28px;
+    }
+  }
+
+  .form-diet__list-of-extras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-diet__item {
+    & ~ & {
+      margin-top: 20px;
+    }
+  }
+
+  .form-diet__subtitle {
+    margin-left: -70px;
+    margin-right: -70px;
+    margin-top: 69px;
+    margin-bottom: 77px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form-diet__btn {
+    height: 52px;
+    width: 45%;
+    margin-right: 60px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .form-diet__text {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+
+  .form-diet__list-of-extras .form-diet__item {
+    margin-top: 0;
+    margin-bottom: 34px;
+    width: 285px;
+  }
+
+  .form-diet__main-info--diet .form-diet__item ~ .form-diet__item {
+    margin-top: 15px;
+  }
+}
+
+
+@media (min-width: $width-desktop) {
+  .form-diet__group {
+    display: flex;
+    // justify-content: space-between;
+  }
+
+  .form-diet__main-info {
+    flex-grow: 1;
+
+    & ~ & {
+      margin-left: 80px;
+      margin-top: 0;
+    }
+  }
+
+  .form-diet__subtitle {
+    margin-right: -110px;
+  }
+
+
+  .form-diet__item {
+    flex-grow: 1;
+    // min-width: 285px;
+
+    & + & {
+      margin-top: 0;
+      margin-left: 80px;
+    }
+  }
+
+  .form-diet__main-info .form-diet__item + .form-diet__item {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .form-diet__main-info--diet .form-diet__item ~ .form-diet__item {
+    margin-top: 15px;
+  }
+
+  .form-diet__btn {
+    margin-right: 80px;
+  }
+
+  .form-diet__list-of-extras .form-diet__item {
+    width: auto;
+    margin-left: 0;
+  }
 }

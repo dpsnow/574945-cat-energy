@@ -12,6 +12,13 @@
   text-align: left;
   color: #222222;
   white-space: nowrap;
+
+  &::before {
+    display: block;
+    margin-right: 16px;
+    width: 28px;
+    height: 28px;
+  }
 }
 
 
@@ -20,10 +27,6 @@
 
   &::before {
     content: "";
-    display: block;
-    margin-right: 16px;
-    width: 28px;
-    height: 28px;
     border-radius: 50%;
     background-color: $crl-light;
     box-shadow: 0 0 0 1px #cdcdcd;
@@ -33,17 +36,13 @@
 .field__label--checkbox {
   &::before {
     content: "";
-    display: block;
-    margin-right: 16px;
-    width: 28px;
-    height: 28px;
     background-color: $crl-light;
     box-shadow: 0 0 0 1px #cdcdcd;
   }
 }
 
 .field__text {
-  padding: 12px 12px 12px 14px;
+  padding: 10px 12px 10px 14px;
   width: 100%;
   min-height: 45px;
   font-family: inherit;
@@ -54,17 +53,17 @@
   text-transform: uppercase;
   border: solid 1px #e3e3e3;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: solid 1px #cdcdcd;
   }
 
-  &:active {
-    border: solid 2px #444444;
+  &:active,
+  &:focus {
+    outline: solid 2px #444444;
   }
 
   &:invalid {
-    border: solid 2px #ff8282;
+    outline: solid 2px #ff8282;
   }
 }
 
@@ -80,4 +79,28 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 21px 16px;
+}
+
+@media (min-width: $width-table) {
+  .field__label {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      margin-right: 21px;
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .field__text {
+    min-height: 52px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 20px;
+  }
+
+  .field__radio:checked + .field__label--radio::before {
+    border: 10px solid $crl-light;
+  }
 }

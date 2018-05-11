@@ -28,15 +28,15 @@
 
 .text--special {
   display: flex;
-  align-items: center;
+  // align-items: center;
 
   &::after {
     content: "";
-    margin-top: 9px;
-    margin-left: 22px;
+    margin-top: 11px;
+    margin-left: 20px;
     flex-grow: 1;
     flex-shrink: 0;
-    min-width: 3px;
+    min-width: 99px;
     height: 3px;
     background-color: $crl-bg-main;
   }
@@ -58,8 +58,9 @@
   .text--special {
     &::before {
       content: "";
-      margin-top: 11px;
+      margin-top: 18px;
       margin-right: 37px;
+      margin-left: -2px;
       width: 30px;
       flex-grow: 0;
       flex-shrink: 1;
@@ -68,7 +69,7 @@
     }
 
     &::after {
-      margin-top: 11px;
+      margin-top: 18px;
       margin-left: 36px;
     }
   }
@@ -77,8 +78,14 @@
 @media (min-width: $width-desktop) {
   .text--special {
     &::before {
-      margin-right: 39px;
+      margin-top: 18px;
+      margin-left: -40px;
       width: 70px;
+    }
+
+    &::after {
+      margin-top: 18px;
+      margin-left: 36px;
     }
   }
 }
