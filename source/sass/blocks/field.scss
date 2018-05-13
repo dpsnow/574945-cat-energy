@@ -40,9 +40,10 @@
 }
 
 .field__text {
+  flex-grow: 1;
   position: relative;
   padding: 10px 12px 10px 14px;
-  width: 100%;
+  // width: 100%;
   min-height: 45px;
   font-family: inherit;
   font-size: 16px;
