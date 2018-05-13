@@ -83,7 +83,7 @@
   }
 
   .catalog__item {
-    flex-basis: 324px;
+    width: 324px;
     min-height: 431px;
     margin-top: 140px;
 
@@ -96,7 +96,7 @@
     display: flex;
     flex-direction: column;
     // justify-content: space-between;
-    padding: 55px 37px 40px 37px;
+    padding: 55px 37px 37px 37px;
     font-size: 20px;
     border: 1px solid #cdcdcd;
 
@@ -127,7 +127,7 @@
   }
 
   .catalog__item {
-    flex-basis: 245px;
+    width: 245px;
   }
 
   .catalog__text {
