@@ -16,6 +16,10 @@
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 }
 
@@ -43,7 +47,7 @@
 
 .product-banner__img {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .product-banner__link {
@@ -85,6 +89,7 @@
     bottom: 0;
     left: 0;
     z-index: -5;
+    margin-bottom: 0;
   }
 
   .product-banner__link {
@@ -111,13 +116,19 @@
       width: 720px;
       height: 696px;
       background-position: top right;
+
+      background-image: url("../img/index-background-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
   .product-banner__img {
     position: absolute;
-    top: 150px;
-    right: 150px;
+    top: 2px;
+    right: 218px;
     bottom: auto;
     left: auto;
     z-index: 5;
@@ -128,8 +139,8 @@
   }
 
   .product-banner__link {
-    width: 21%;
-    min-height: 53px;
+    width: 245px;
+    min-height: 52px;
     font-size: 20px;
     line-height: 20px;
   }
