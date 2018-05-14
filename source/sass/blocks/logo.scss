@@ -1,0 +1,18 @@
+.logo {
+  display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $width-table) {
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+}

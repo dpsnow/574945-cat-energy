@@ -22,9 +22,7 @@
 }
 
 
-
 .field__label--radio {
-
   &::before {
     content: "";
     border-radius: 50%;
@@ -42,8 +40,10 @@
 }
 
 .field__text {
+  flex-grow: 1;
+  position: relative;
   padding: 10px 12px 10px 14px;
-  width: 100%;
+  // width: 100%;
   min-height: 45px;
   font-family: inherit;
   font-size: 16px;
@@ -52,6 +52,22 @@
   color: $clr-text;
   text-transform: uppercase;
   border: solid 1px #e3e3e3;
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 13px;
+    background-position: 96% center;
+  }
+
+
+
+  &--phone {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 96% center;
+  }
 
   &:hover {
     border: solid 1px #cdcdcd;
@@ -65,6 +81,16 @@
   &:invalid {
     outline: solid 2px #ff8282;
   }
+}
+
+
+.field__text[type=number] {
+  -moz-appearance: textfield;
+}
+
+.field__text::-webkit-outer-spin-button,
+.field__text::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 

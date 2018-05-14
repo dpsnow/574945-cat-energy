@@ -1,6 +1,6 @@
 .example {
   padding-top: 16px;
-  padding-bottom: 33px;
+  padding-bottom: 34px;
   background-color: #f2f2f2;
 }
 
@@ -16,14 +16,12 @@
   margin-bottom: 6px;
 }
 
-
 .example__cost {
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   color: $clr-main;
 }
-
 
 .example__slider {
   width: 100%;
@@ -36,12 +34,8 @@
 @media (min-width: $width-table) {
   .example {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 44px;
-    padding-bottom: 64px;
+    padding-bottom: 90px;
     background-color: transparent;
     border-top: 1px solid #cdcdcd;
 
@@ -54,6 +48,13 @@
       height: 462px;
       background-color: #f2f2f2;
     }
+  }
+
+  .example__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .example__content {
@@ -85,8 +86,7 @@
 
   .example__slider {
     height: 523px;
-    margin-top: 90px;
-    padding: 0 100px;
+    margin-top: 64px;
   }
 }
 
@@ -95,18 +95,24 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-top: 24px;
+    padding-top: 13px;
     padding-bottom: 65px;
     border-top: none;
+    flex-wrap: nowrap;
+  }
+
+  .example__content {
+    flex-basis: 36%;
+    margin-top: 69px;
+    display: block;
   }
 
   .example__title {
     margin-bottom: 145px;
   }
 
-  .example__content {
-    flex-basis: 30%;
-    display: block;
+  .example__text {
+    padding-right: 0;
   }
 
   .example__statistics {
@@ -131,5 +137,6 @@
   .example__slider {
     width: auto;
     height: auto;
+    margin: 0;
   }
 }

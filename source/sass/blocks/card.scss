@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 25px 20px 21px 20px;
+  padding: 25px 20px 22px 20px;
   background-color: $crl-bg-grey;
 
   &::before {
@@ -63,9 +63,9 @@
 
 .card__descr {
   margin-bottom: 20px;
-  /*Для PP
-  line-height: 19px;*/
-  padding-bottom: 22px;
+  /*Для PP*/
+  /*line-height: 19px;*/
+  padding-bottom: 21px;
   border-bottom: 1px solid #d6d6d6;
 }
 
@@ -95,7 +95,9 @@
 
   &:hover::after,
   &:focus::after {
-    background-image: url("../img/icon-right-arrow-long.svg");
+    width: 33px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 }
 
@@ -145,8 +147,17 @@
     border: none;
   }
 
+  .card--gain .card__descr {
+    width: 92%;
+  }
+
+
   .card__link {
     font-size: 20px;
+
+    &::after {
+      margin-left: 25px;
+    }
   }
 }
 
@@ -198,5 +209,9 @@
 
   .card__descr {
     margin-bottom: 7px;
+  }
+
+  .card--gain .card__descr {
+    width: auto;
   }
 }

@@ -17,6 +17,10 @@
   color: $clr-main;
   white-space: nowrap;
   border-top: 1px solid #d6d6d6;
+
+  &:last-of-type {
+    border-bottom: 1px solid #d6d6d6;
+  }
 }
 
 .site-nav__link {
@@ -56,16 +60,12 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
 @media (max-width: $mobile-only) {
+  .site-nav__item {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
   .site-nav--closed {
     display: none;
   }
@@ -91,7 +91,7 @@
     border-top: none;
 
     & + & {
-      margin-left: 30px;
+      margin-left: 36px;
     }
   }
 }

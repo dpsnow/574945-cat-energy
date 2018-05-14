@@ -8,7 +8,8 @@
   &--content {
     font-family: $sec-font;
     font-size: 14px;
-    line-height: 18px;
+    /*line-height: 18px;*/
+    line-height: 19px;
     color: $clr-text;
   }
 
@@ -34,9 +35,10 @@
     content: "";
     margin-top: 11px;
     margin-left: 20px;
+    // margin-right: 72px;
     flex-grow: 1;
     flex-shrink: 0;
-    min-width: 99px;
+    min-width: 45px;
     height: 3px;
     background-color: $crl-bg-main;
   }
@@ -58,7 +60,7 @@
   .text--special {
     &::before {
       content: "";
-      margin-top: 18px;
+      margin-top: 22px;
       margin-right: 37px;
       margin-left: -2px;
       width: 30px;
@@ -69,7 +71,7 @@
     }
 
     &::after {
-      margin-top: 18px;
+      margin-top: 22px;
       margin-left: 36px;
     }
   }
@@ -78,13 +80,13 @@
 @media (min-width: $width-desktop) {
   .text--special {
     &::before {
-      margin-top: 18px;
+      margin-top: 23px;
       margin-left: -40px;
       width: 70px;
     }
 
     &::after {
-      margin-top: 18px;
+      margin-top: 23px;
       margin-left: 36px;
     }
   }

@@ -4,7 +4,7 @@
 }
 
 .advantage__title {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 }
 
 .advantage__list {
@@ -97,7 +97,7 @@
       content: counter(item);
       position: absolute;
       top: -40px;
-      right: 0;
+      left: 112px;
       z-index: -1;
       font-size: 281px;
       line-height: 1;
@@ -111,6 +111,7 @@
 @media (min-width: $width-desktop) {
   .advantage {
     padding-top: 74px;
+    padding-bottom: 0;
   }
 
   .advantage__list {
