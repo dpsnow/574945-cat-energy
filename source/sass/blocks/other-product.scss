@@ -38,21 +38,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 25px;
+    padding-right: 36px;
     padding-bottom: 25px;
     padding-left: 37px;
-    padding-right: 36px;
     border: 1px solid #d6d6d6;
   }
 
   .other-product__name {
-    margin-left: 2px;
     margin-bottom: 26px;
+    margin-left: 2px;
     font-size: 20px;
   }
 
   .other-product__details {
-    margin-top: 4px;
     width: auto;
+    margin-top: 4px;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
@@ -66,29 +66,23 @@
 
 @media (min-width: $width-desktop) {
   .other-product {
-    display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    border-left: none;
     border-right: none;
+    border-left: none;
   }
 
   .other-product__name {
     flex-basis: 32%;
     margin-bottom: 0;
-    font-size: 20px;
   }
 
   .other-product__details {
-    flex-basis: 32%;
-    width: auto;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: left;
+    width: 32%;
     margin-top: 15px;
     margin-bottom: 0;
+    text-align: left;
   }
 
   .other-product__btn {
