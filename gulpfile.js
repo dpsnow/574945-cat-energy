@@ -11,6 +11,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -49,6 +50,12 @@ gulp.task("svgSprite", function() {
     }))
     .pipe(rename("sprite-social.svg"))
     .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(posthtml())
+    .pipe(gulp.dest("source"));
 });
 
 gulp.task("serve", ["style"], function() {

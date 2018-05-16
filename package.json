@@ -12,6 +12,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "7.0.x",
+    "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.2.3",
     "gulp-sass": "4.0.x",
     "gulp-svgstore": "^6.1.1",
