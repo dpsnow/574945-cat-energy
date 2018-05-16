@@ -57,7 +57,7 @@
 
   .slider__list {
     position: relative;
-    height: 540px;
+    // height: 540px;
     margin: 0 16px;
     margin-bottom: 33px;
   }
@@ -90,6 +90,8 @@
 
 @media (min-width: $width-desktop) {
   .slider__list {
-    height: 520px;
+    // height: 520px;
+    margin: 0 17px;
+    margin-bottom: 30px;
   }
 }
