@@ -37,7 +37,10 @@
 
 @media (min-width: $width-table) {
   .promo {
-    padding: 0 92px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 92px;
+    padding-right: 92px;
     display: flex;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
