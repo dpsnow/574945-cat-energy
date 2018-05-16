@@ -10,6 +10,7 @@ var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
+var svgstore = require("gulp-svgstore");
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -38,6 +39,15 @@ gulp.task("minifyImg", function() {
 gulp.task("webp", function () {
   return gulp.src("source/img/**/index-can-*.{png,jpg}")
     .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("svgSprite", function() {
+  return gulp.src("source/img/icon-sprite-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite-social.svg"))
     .pipe(gulp.dest("source/img"));
 });
 
