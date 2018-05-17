@@ -19,8 +19,8 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
     right: -20px;
+    bottom: 0;
     left: -20px;
     height: 1px;
     background-color: #d6d6d6;
@@ -33,16 +33,15 @@
   &::before {
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
     margin-right: auto;
     margin-bottom: 22px;
     margin-left: auto;
+    width: 30px;
+    height: 30px;
     background-image: url("../img/icon-plus-mobile.svg");
     background-size: 100%;
     opacity: 0.2;
   }
-
 }
 
 .catalog__text {
@@ -83,9 +82,9 @@
   }
 
   .catalog__item {
+    margin-top: 140px;
     width: 324px;
     min-height: 431px;
-    margin-top: 140px;
 
     &::after {
       content: none;
@@ -101,9 +100,9 @@
     border: 1px solid #cdcdcd;
 
     &::before {
+      margin-bottom: 50px;
       width: 60px;
       height: 60px;
-      margin-bottom: 50px;
     }
   }
 

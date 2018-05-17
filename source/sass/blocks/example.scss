@@ -24,11 +24,11 @@
 }
 
 .example__slider {
-  width: 100%;
   margin-top: 35px;
   margin-right: auto;
   margin-bottom: 4px;
   margin-left: auto;
+  width: 100%;
 }
 
 @media (min-width: $width-table) {
@@ -42,8 +42,8 @@
     &::after {
       content: "";
       position: absolute;
-      left: 0;
       bottom: 0;
+      left: 0;
       z-index: -1;
       width: 100%;
       height: 462px;
@@ -86,26 +86,26 @@
   }
 
   .example__slider {
-    height: 523px;
     margin-top: 64px;
+    height: 523px;
   }
 }
 
 @media (min-width: $width-desktop) {
   .example {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 17px;
     padding-bottom: 63px;
     border-top: none;
-    flex-wrap: nowrap;
   }
 
   .example__content {
+    display: block;
     flex-basis: 36%;
     margin-top: 65px;
-    display: block;
   }
 
   .example__title {
@@ -136,9 +136,9 @@
   }
 
   .example__slider {
+    right: -57px;
+    margin: 0;
     width: auto;
     height: auto;
-    margin: 0;
-    right: -57px;
   }
 }

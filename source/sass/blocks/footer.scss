@@ -1,8 +1,8 @@
 .footer {
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: center;
+  align-content: center;
   text-align: center;
 }
 
@@ -53,8 +53,8 @@
   }
 
   .footer__social {
-    padding-right: 0;
     margin-left: 18px;
+    padding-right: 0;
   }
 
   .footer__copyright {

@@ -58,10 +58,10 @@
 
 @media (min-width: $width-table) {
   .product-banner {
-    height: 830px;
     padding-top: 20px;
     padding-right: 50px;
     padding-left: 89px;
+    height: 830px;
 
     &::after {
       display: none;
@@ -69,8 +69,8 @@
   }
 
   .product-banner__title {
-    width: 415px;
     margin-bottom: 42px;
+    width: 415px;
     font-size: 60px;
     text-align: left;
     color: $clr-main;
@@ -103,10 +103,10 @@
 
 @media (min-width: $width-desktop) {
   .product-banner {
-    height: 635px;
     // position: static;
     padding-top: 82px;
     padding-left: 80px;
+    height: 635px;
 
     &::after {
       top: -140px;
@@ -115,9 +115,8 @@
       display: block;
       width: 720px;
       height: 696px;
-      background-position: top right;
-
       background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: top right;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");

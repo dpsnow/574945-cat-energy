@@ -5,9 +5,10 @@
 
 .slider__list {
   @include indent-reset;
+
   margin: auto;
-  list-style: none;
   margin-left: -20px;
+  list-style: none;
 }
 
 .slider__item {
@@ -33,8 +34,8 @@
 }
 
 .slider__switch--to-1:checked ~ .switch .switch__scale .switch__indicator {
-  display: block;
   left: 6px;
+  display: block;
 }
 
 .slider__switch--to-2:checked ~ .slider__list .slider__item--after {
@@ -42,16 +43,16 @@
 }
 
 .slider__switch--to-2:checked ~ .switch .switch__scale .switch__indicator {
-  display: block;
   right: 6px;
+  display: block;
 }
 
 
 @media (min-width: $width-table) {
   .slider {
+    position: relative;
     justify-content: center;
     align-content: center;
-    position: relative;
     width: 100%;
   }
 
@@ -71,13 +72,13 @@
     &--before {
       position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
     }
 
     &--after {
-
+      //
     }
   }
 

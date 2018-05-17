@@ -16,9 +16,9 @@
 .product__name {
   @include indent-reset;
 
-  width: 60%;
-  margin-bottom: 15px;
   margin-top: 22px;
+  margin-bottom: 15px;
+  width: 60%;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -59,20 +59,20 @@
   }
 
   .product__info {
+    margin-bottom: 14px;
+    padding: 0 37px;
     width: 100%;
     font-size: 20px;
     text-align: center;
-    padding: 0 37px;
-    margin-bottom: 14px;
   }
 
   .product__name {
-    width: 150px;
     margin-top: 36px;
     margin-right: auto;
     margin-bottom: 19px;
     margin-left: auto;
     padding: 0;
+    width: 150px;
     font-size: 20px;
     text-align: center;
   }
@@ -87,15 +87,15 @@
   }
 
   .product__btn {
-    width: auto;
-    margin: 0 38px;
     align-self: stretch;
+    margin: 0 38px;
+    width: auto;
   }
 }
 
 
 @media (min-width: $width-desktop) {
   .product {
-
+    // margin: 1;
   }
 }

@@ -4,8 +4,9 @@
 
 .form-diet__descr {
   @include indent-reset;
-  padding-right: 15px;
+
   margin-bottom: 40px;
+  padding-right: 15px;
   font-size: 14px;
   line-height: 18px;
   text-align: left;
@@ -14,14 +15,12 @@
 
 .form-diet__group {
   @include indent-reset;
-  margin: 0;
   // padding: 0 20px;
+
   display: block;
+  margin: 0;
   border: none;
 
-  &--extra {
-
-  }
 
   &--footer {
     display: flex;
@@ -36,19 +35,13 @@
 }
 
 .form-diet__main-info--diet {
-  margin-left: -20px;
   margin-right: -20px;
+  margin-left: -20px;
   padding: 22px 20px;
   border: 1px solid #ededed;
 }
 
-
-.form-diet__list-of-extras {
-
-}
-
 .form-diet__item {
-
   &--diet {
     border: solid 1px #ededed;
   }
@@ -61,28 +54,30 @@
 
 .form-diet__subtitle {
   @include indent-reset;
+
   margin-top: 30px;
-  margin-bottom: 32px;
   margin-right: -20px;
+  margin-bottom: 32px;
   margin-left: -1px;
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   text-align: left;
-  font-weight: 400;
   color: $clr-main;
 }
 
 .form-diet__btn {
-  width: 100%;
   margin-top: 15px;
+  width: 100%;
 }
 
 .form-diet__text {
   @include indent-reset;
+
   margin: 21px 0;
-  font-family: $sec-font;
   font-size: 14px;
   line-height: 16px;
+  font-family: $sec-font;
   color: $clr-text;
 }
 
@@ -92,15 +87,6 @@
     margin-top: 23px;
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 @media (min-width: $width-table) {
@@ -132,8 +118,8 @@
     }
 
     &--diet {
-      margin-left: 0;
       margin-right: 0;
+      margin-left: 0;
       padding: 25px 28px;
     }
   }
@@ -151,10 +137,10 @@
   }
 
   .form-diet__subtitle {
-    margin-left: -67px;
-    margin-right: -70px;
     margin-top: 65px;
+    margin-right: -70px;
     margin-bottom: 77px;
+    margin-left: -67px;
     font-size: 36px;
     line-height: 36px;
 
@@ -175,10 +161,10 @@
   }
 
   .form-diet__btn {
-    height: 52px;
-    width: 45%;
     margin-top: 0;
     margin-right: 60px;
+    width: 45%;
+    height: 52px;
     font-size: 20px;
     line-height: 1;
   }
@@ -219,14 +205,14 @@
     width: 45%;
 
     & ~ & {
-      margin-left: 80px;
       margin-top: 0;
+      margin-left: 80px;
     }
   }
 
   .form-diet__subtitle {
-    margin-right: -110px;
     margin-top: 67px;
+    margin-right: -110px;
     margin-bottom: 77px;
 
     &--contact {
@@ -267,8 +253,8 @@
   }
 
   .form-diet__btn {
-    width: 570px;
     margin-right: 80px;
+    width: 570px;
   }
 
   .form-diet__list-of-extras .form-diet__item {

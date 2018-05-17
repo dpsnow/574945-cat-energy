@@ -1,10 +1,9 @@
 .promo {
   padding-top: 65px;
-
   background-color: $crl-bg-main;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -14,20 +13,20 @@
 .promo__title {
   margin: auto;
   width: 160px;
-  font-family: $sec-font;
   font-size: 16px;
   line-height: 20px;
+  font-family: $sec-font;
   text-align: center;
   color: $crl-light;
 
   &::before {
     content: "";
-    flex-shrink: 0;
     display: block;
-    width: 55px;
-    height: 60px;
+    flex-shrink: 0;
     margin: 0 auto;
     margin-bottom: 62px;
+    width: 55px;
+    height: 60px;
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-size: 55px 60px;
@@ -37,11 +36,11 @@
 
 @media (min-width: $width-table) {
   .promo {
+    display: flex;
     padding-top: 10px;
+    padding-right: 92px;
     padding-bottom: 5px;
     padding-left: 92px;
-    padding-right: 92px;
-    display: flex;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -50,13 +49,13 @@
   }
 
   .promo__title {
-    padding-right: 28px;
     display: flex;
+    flex-grow: 1;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
     margin: 0;
+    padding-right: 28px;
     text-align: left;
 
     &::before {
@@ -78,8 +77,8 @@
   }
 
   .promo__title {
-    padding: 43px 10px;
     flex-direction: column;
+    padding: 43px 10px;
     text-align: center;
 
     &::before {

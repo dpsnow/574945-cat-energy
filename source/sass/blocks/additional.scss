@@ -77,16 +77,16 @@
   }
 
   .additional__promo {
+    // flex-basis: 245px;
+    margin: 0;
     width: 245px;
     // height: 289px;
     height: auto;
-    // flex-basis: 245px;
-    margin: 0;
   }
 
   .additional__title {
-    padding-left: 42px;
     margin-bottom: 82px;
+    padding-left: 42px;
   }
 
   .additional__item {
