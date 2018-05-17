@@ -7,6 +7,7 @@
   @include indent-reset;
   margin: auto;
   list-style: none;
+  margin-left: -20px;
 }
 
 .slider__item {
@@ -16,7 +17,6 @@
 .slider__photo {
   display: block;
   margin: 0 auto;
-
 }
 
 
@@ -57,7 +57,7 @@
 
   .slider__list {
     position: relative;
-    height: 540px;
+    // height: 540px;
     margin: 0 16px;
     margin-bottom: 33px;
   }
@@ -70,6 +70,7 @@
 
     &--before {
       position: absolute;
+      top: 0;
       bottom: 0;
       left: 0;
       right: 0;
@@ -83,5 +84,14 @@
   .slider__controls {
     margin: 0 69px;
     margin-top: auto;
+  }
+}
+
+
+@media (min-width: $width-desktop) {
+  .slider__list {
+    // height: 520px;
+    margin: 0 17px;
+    margin-bottom: 30px;
   }
 }

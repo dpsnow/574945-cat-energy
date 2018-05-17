@@ -7,7 +7,7 @@
 }
 
 .footer__item {
-  min-height: 62px;
+  min-height: 63px;
   // margin-top: 20px;
 
   & + & {
@@ -23,8 +23,12 @@
   height: 94px;
 }
 
+.footer__social {
+  padding-right: 11px;
+}
+
 .footer__copyright {
-  padding-top: 19px;
+  padding-top: 18px;
   height: 78px;
 }
 
@@ -45,5 +49,16 @@
     padding-top: 0;
     // margin-top: 0;
     width: 130px;
+    height: auto;
+  }
+
+  .footer__social {
+    padding-right: 0;
+    margin-left: 18px;
+  }
+
+  .footer__copyright {
+    padding-top: 10px;
+    height: auto;
   }
 }

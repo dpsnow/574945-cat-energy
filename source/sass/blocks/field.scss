@@ -19,6 +19,10 @@
     width: 28px;
     height: 28px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 
@@ -29,6 +33,10 @@
     background-color: $crl-light;
     box-shadow: 0 0 0 1px #cdcdcd;
   }
+
+  &:hover::before {
+    box-shadow: 0 0 0 1px #bababa;
+  }
 }
 
 .field__label--checkbox {
@@ -37,14 +45,20 @@
     background-color: $crl-light;
     box-shadow: 0 0 0 1px #cdcdcd;
   }
+
+  &:hover::before {
+    box-shadow: 0 0 0 1px #bababa;
+  }
 }
 
 .field__text {
+  display: flex;
   flex-grow: 1;
   position: relative;
   padding: 10px 12px 10px 14px;
   // width: 100%;
   min-height: 45px;
+  max-width: 100%;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
@@ -53,20 +67,10 @@
   text-transform: uppercase;
   border: solid 1px #e3e3e3;
 
-  &--email {
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-size: 17px 13px;
-    background-position: 96% center;
-  }
-
-
-
-  &--phone {
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 96% center;
+  &--textarea {
+    width: 100%;
+    min-height: 152px;
+    padding-top: 15px;
   }
 
   &:hover {
@@ -80,6 +84,36 @@
 
   &:invalid {
     outline: solid 2px #ff8282;
+  }
+}
+
+.field__text--email {
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: right 16px center;
+
+  &:invalid {
+    background-image: url("../img/icon-mail-red.svg");
+  }
+
+  &:valid {
+    background-image: url("../img/icon-mail-green.svg");
+  }
+}
+
+.field__text--phone {
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: right 14px center;
+
+  &:invalid {
+    background-image: url("../img/icon-phone-red.svg");
+  }
+
+  &:valid {
+    background-image: url("../img/icon-phone-green.svg");
   }
 }
 
@@ -97,7 +131,7 @@
 .field__radio:checked + .field__label--radio::before {
   border: 8px solid $crl-light;
   background-color: $crl-bg-main;
-  box-shadow: 0 0 0 1px #cdcdcd
+  box-shadow: 0 0 0 1px #cdcdcd;
 }
 
 .field__checkbox:checked + .field__label--checkbox::before {
@@ -106,6 +140,7 @@
   background-position: center;
   background-size: 21px 16px;
 }
+
 
 @media (min-width: $width-table) {
   .field__label {
@@ -124,6 +159,11 @@
     font-size: 20px;
     line-height: 20px;
     padding-left: 20px;
+
+    &--textarea {
+      min-height: 174px;
+      padding-top: 15px;
+    }
   }
 
   .field__radio:checked + .field__label--radio::before {

@@ -2,8 +2,10 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.js"></script>
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 <body>
@@ -62,7 +64,7 @@
             </label>
           </div>
         </div>
-        <h3 class="form-diet__subtitle text text--special">Контактные данные (владельца кота)</h3>
+        <h3 class="form-diet__subtitle form-diet__subtitle--contact text text--special">Контактные данные (владельца кота)</h3>
         <div class="form-diet__group">
           <label class="form-diet__item field">
             <span class="field__label text text--uppercase">E-mail:*</span>
@@ -73,11 +75,11 @@
             <input class="field__text field__text--phone" type="tel" name="number" value="8 (960) 900-60-90" required>
           </label>
         </div>
-        <h3 class="form-diet__subtitle text text--special">Комментарий</h3>
+        <h3 class="form-diet__subtitle form-diet__subtitle--comment text text--special">Комментарий</h3>
         <div class="form-diet__group">
-          <textarea class="form-diet__item field__text" name="message" cols="30" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="form-diet__item field__text field__text--textarea" name="message" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
-        <h3 class="form-diet__subtitle text text--special">Дополнительно</h3>
+        <h3 class="form-diet__subtitle form-diet__subtitle--add text text--special">Дополнительно</h3>
         <div class="form-diet__group form-diet__list-of-extras">
           <label class="form-diet__item field">
             <input class="field__checkbox visually-hidden" type="checkbox" name="other-sweetener" checked>
@@ -119,7 +121,7 @@
       <div class="footer__item footer__logo">
         <img class="logo" src="img/logo-footer.svg" alt="Надпись «Кэт Энерджи»" width="128" height="24">
       </div>
-      <ul class="footer__item social">
+      <ul class="footer__item footer__social social">
         <li class="social__item">
           <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Вконтакте</span>

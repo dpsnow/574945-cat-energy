@@ -33,6 +33,7 @@
 
   &::after {
     content: "";
+    display: block;
     margin-top: 11px;
     margin-left: 20px;
     // margin-right: 72px;
@@ -60,6 +61,7 @@
   .text--special {
     &::before {
       content: "";
+      display: block;
       margin-top: 22px;
       margin-right: 37px;
       margin-left: -2px;
