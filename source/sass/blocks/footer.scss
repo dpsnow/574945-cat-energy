@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  text-align: center;
 }
 
 .footer__item {
@@ -25,6 +23,7 @@
 
 .footer__social {
   padding-right: 11px;
+  height: 63px;
 }
 
 .footer__copyright {
@@ -40,6 +39,10 @@
   }
 
   .footer__item {
+    padding-top: 0;
+    min-height: auto;
+    height: auto;
+
     & + & {
       border-top: none;
     }
@@ -47,9 +50,8 @@
 
   .footer__logo {
     padding-top: 0;
-    // margin-top: 0;
     width: 130px;
-    height: auto;
+    height: 44px;
   }
 
   .footer__social {
@@ -58,7 +60,7 @@
   }
 
   .footer__copyright {
-    padding-top: 10px;
+    padding-top: 0;
     height: auto;
   }
 }

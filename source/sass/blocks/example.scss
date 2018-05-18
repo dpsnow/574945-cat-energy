@@ -35,7 +35,7 @@
   .example {
     position: relative;
     padding-top: 44px;
-    padding-bottom: 90px;
+    padding-bottom: 60px;
     background-color: transparent;
     border-top: 1px solid #cdcdcd;
 
@@ -86,20 +86,24 @@
   }
 
   .example__slider {
-    margin-top: 64px;
-    height: 523px;
+    margin-top: 50px;
+    // height: 554px;
   }
 }
 
 @media (min-width: $width-desktop) {
   .example {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    // display: flex;
+    // flex-wrap: nowrap;
+    // justify-content: space-between;
+    // align-items: flex-end;
     padding-top: 17px;
     padding-bottom: 63px;
     border-top: none;
+  }
+
+  .example__inner {
+    align-items: flex-end;
   }
 
   .example__content {
@@ -136,9 +140,8 @@
   }
 
   .example__slider {
-    right: -57px;
     margin: 0;
-    width: auto;
+    width: 571px;
     height: auto;
   }
 }

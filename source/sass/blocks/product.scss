@@ -6,6 +6,11 @@
 }
 
 .product__photo {
+  display: flex;
+  width: 140px;
+}
+
+.product__photo img {
   display: block;
 }
 
@@ -84,6 +89,7 @@
 
   .product__photo {
     margin-top: -82px;
+    width: auto;
   }
 
   .product__btn {

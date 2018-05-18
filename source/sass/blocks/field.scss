@@ -117,13 +117,16 @@
   }
 }
 
+.field__text[type=number] {
+  -moz-appearance: textfield;
+}
+
 .field__text[type="number"]::-webkit-outer-spin-button,
 .field__text[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 

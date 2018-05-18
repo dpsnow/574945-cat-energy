@@ -1,8 +1,12 @@
+.location__card {
+  position: relative;
+}
+
 .location__text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 27px 19px;
+  // padding: 27px 19px;
   min-height: 114px;
   font-size: 16px;
   line-height: 20px;
@@ -42,7 +46,7 @@
 
 @media (min-width: $width-table) {
   .location__text {
-    padding: 62px 71px 60px 71px;
+    padding: 62px 41px 60px 41px;
     min-height: 201px;
   }
 
@@ -82,7 +86,7 @@
   .location__text {
     position: absolute;
     top: 0;
-    left: 110px;
+    left: 0;
     z-index: 5;
     justify-content: flex-start;
     margin: 95px 0 104px 0;

@@ -56,9 +56,9 @@
   @include indent-reset;
 
   margin-top: 30px;
-  margin-right: -20px;
+  // margin-right: -20px;
   margin-bottom: 32px;
-  margin-left: -1px;
+  // margin-left: -1px;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
@@ -138,9 +138,9 @@
 
   .form-diet__subtitle {
     margin-top: 65px;
-    margin-right: -70px;
+    // margin-right: -70px;
     margin-bottom: 77px;
-    margin-left: -67px;
+    // margin-left: -67px;
     font-size: 36px;
     line-height: 36px;
 
@@ -212,7 +212,7 @@
 
   .form-diet__subtitle {
     margin-top: 67px;
-    margin-right: -110px;
+    // margin-right: -110px;
     margin-bottom: 77px;
 
     &--contact {
@@ -264,4 +264,9 @@
       margin-left: 81px;
     }
   }
+}
+
+.form-diet__subtitle {
+  // margin-left: calc((0px - 100vw + 100%) / 2);
+  // margin-right: calc((0px - 100vw + 100%) / 2 + 8px);
 }

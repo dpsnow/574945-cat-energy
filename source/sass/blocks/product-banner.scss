@@ -110,13 +110,15 @@
 
     &::after {
       top: -140px;
-      right: -110px;
+      right: calc((0px - 100vw + 100%) / 2 + 8px);
       left: auto;
       display: block;
-      width: 720px;
+      width: calc(50vw - 8px);
       height: 696px;
+      background-color: #64a93c;
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-position: top right;
+      background-size: contain;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
@@ -135,6 +137,7 @@
 
   .product-banner__slogan {
     margin-bottom: 53px;
+    width: 415px;
   }
 
   .product-banner__link {

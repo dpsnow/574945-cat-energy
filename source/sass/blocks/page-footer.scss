@@ -1,14 +1,10 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
   background-color: #f2f2f2;
 }
-
-@media (min-width: $width-table) {
-  .page-footer {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 
 .page-footer__map {
   width: 100%;
@@ -16,14 +12,20 @@
 
 
 @media (min-width: $width-table) {
+  .page-footer {
+    // padding-top: 21px;
+  }
+
   .page-footer__content {
     min-height: 150px;
+    padding-top: 41px;
+    padding-bottom: 41px;
   }
 }
 
 
 @media (min-width: $width-desktop) {
   .page-footer__content {
-    padding-top: 10px;
+    // padding-top: 10px;
   }
 }
