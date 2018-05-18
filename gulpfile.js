@@ -15,6 +15,8 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var run = require("run-sequence");
+var concat = require("gulp-concat");
+var uglify = require("gulp-uglify");
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -63,11 +65,20 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("scripts", function() {
+  return gulp.src(["source/js/*.js", "!source/js/picturefill.js"])
+    .pipe(concat("scripts.js"))
+    .pipe(uglify())
+    .pipe(rename("scripts.min.css"))
+    .pipe(gulp.dest('build/js'));
+});
+
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
-      "source/js/**"
+      "source/js/*.min.js*",
+      "source/js/picturefill.js"
     ], {
       base: "source"
     })
@@ -88,7 +99,8 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html",["html"]);
+  gulp.watch("source/*.html",["html"]).on("change", server.reload);
+  gulp.watch("source/js/*.js",["scripts"]).on("change", server.reload);
 });
 
 
@@ -101,6 +113,7 @@ gulp.task("build", function (done) {
     "webp",
     "svgSprite",
     "html",
+    "scripts",
     done
   );
 });
