@@ -3,6 +3,10 @@
   align-items: center;
 }
 
+.field input:disabled + .field__label {
+  opacity: 0.3;
+}
+
 .field__label {
   display: flex;
   align-items: center;
