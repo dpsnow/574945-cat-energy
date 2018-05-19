@@ -27,7 +27,6 @@
     justify-content: center;
     margin-top: 24px;
   }
-
 }
 
 .form-diet__main-info--diet {
@@ -83,7 +82,7 @@
 }
 
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .form-diet {
     padding-bottom: 73px;
   }
@@ -203,9 +202,6 @@
     &--contact {
       margin-top: 72px;
       margin-bottom: 76px;
-    }
-
-    &--comment {
     }
 
     &--add {

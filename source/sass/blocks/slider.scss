@@ -48,7 +48,7 @@
 }
 
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .slider {
     position: relative;
     justify-content: center;
@@ -77,14 +77,13 @@
       width: 365.5px;
       background-image: linear-gradient(to top, #f2f2f2 348px, #ffffff 329px);
     }
-
   }
 
   .slider__controls {
-    margin-left: 68px;
-    margin-right: 70px;
     margin-top: 0;
+    margin-right: 70px;
     margin-bottom: 5px;
+    margin-left: 68px;
   }
 }
 
@@ -103,7 +102,7 @@
   }
 
   .slider__controls {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
 }

@@ -130,9 +130,6 @@
   appearance: textfield;
 }
 
-
-
-
 .field__text[type="number"]::-webkit-outer-spin-button,
 .field__text[type="number"]::-webkit-inner-spin-button {
   margin: 0;
@@ -153,7 +150,7 @@
 }
 
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .field__label {
     font-size: 20px;
     line-height: 20px;

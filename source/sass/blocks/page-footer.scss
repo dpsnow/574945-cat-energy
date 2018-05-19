@@ -11,10 +11,10 @@
 }
 
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .page-footer__content {
-    min-height: 150px;
     padding-top: 41px;
     padding-bottom: 41px;
+    min-height: 150px;
   }
 }

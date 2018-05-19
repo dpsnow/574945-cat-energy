@@ -10,11 +10,11 @@
   min-height: 55px;
 }
 
-.page-header__toggle.nav-toggle--burger {
+.nav-toggle--burger {
   margin-top: 9px;
 }
 
-.page-header__toggle.nav-toggle--close {
+.nav-toggle--close {
   margin-top: 13px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .page-header {
     padding-top: 24px;
     min-height: 120px;

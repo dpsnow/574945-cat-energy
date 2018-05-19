@@ -1,4 +1,4 @@
-.table__cell {
+.tablet__cell {
   @include indent-reset;
 
   &--left {
@@ -10,13 +10,13 @@
   }
 }
 
-@media (min-width: $width-table) {
-  .table__row {
+@media (min-width: $width-tablet) {
+  .tablet__row {
     height: 32px;
     border-bottom: 1px solid #cdcdcd;
   }
 
-  .table__cell {
+  .tablet__cell {
     padding-bottom: 9px;
     min-width: 96px;
     vertical-align: bottom;
@@ -24,7 +24,7 @@
 }
 
 @media (min-width: $width-desktop) {
-  .table__cell {
+  .tablet__cell {
     min-width: auto;
   }
 }

@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 27px 19px;
   width: 100%;
   min-height: 114px;
   font-size: 16px;
@@ -46,9 +45,8 @@
   }
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .location__text {
-    // padding: 62px 41px 60px 41px;
     min-height: 201px;
   }
 
@@ -90,11 +88,11 @@
     align-items: flex-start;
     margin-top: 95px;
     margin-bottom: 104px;
-    width: 570px;
     padding-top: 66px;
-    padding-bottom: 10px;
     padding-right: 88px;
+    padding-bottom: 10px;
     padding-left: 76px;
+    width: 570px;
     background-color: $crl-light;
   }
 

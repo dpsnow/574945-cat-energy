@@ -42,7 +42,7 @@
   background-color: #f2f2f2;
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .data {
     & + & {
       margin-left: 42px;

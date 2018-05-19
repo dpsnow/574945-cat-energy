@@ -30,7 +30,7 @@
   height: 78px;
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
@@ -39,8 +39,8 @@
 
   .footer__item {
     padding-top: 0;
-    min-height: auto;
     height: auto;
+    min-height: auto;
 
     & + & {
       border-top: none;

@@ -9,6 +9,7 @@
 
 .advantage__list {
   @include indent-reset;
+
   list-style: none;
 }
 
@@ -53,7 +54,7 @@
   }
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .advantage {
     padding-top: 45px;
     padding-bottom: 58px;
