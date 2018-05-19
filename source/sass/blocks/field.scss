@@ -9,14 +9,9 @@
 
 .field input[type="radio"]:focus + .field__label::before,
 .field input[type="checkbox"]:focus + .field__label::before {
-  // outline: 1px solid $crl-bg-main;
   box-shadow: 0 0 0 1px #bababa, 0 0 0 5px #ffffff, 0 0 0 6px #68b738;
 }
 
-// .field input[type="radio"]:focus + .field__label,
-// .field input[type="checkbox"]:focus + .field__label {
-//   outline: 1px dotted $crl-bg-main;
-// }
 
 .field__label {
   display: flex;
@@ -72,7 +67,6 @@
   flex-grow: 1;
   padding: 10px 12px 10px 14px;
   max-width: 100%;
-  // width: 100%;
   min-height: 45px;
   font-size: 16px;
   line-height: 18px;
@@ -136,13 +130,7 @@
   appearance: textfield;
 }
 
-// .field__text[type="number"]::-webkit-outer-spin-button,
-// .field__text[type="number"]::-webkit-inner-spin-button {
-//   margin: 0;
 
-//   -webkit-appearance: none;
-//   appearance: none;
-// }
 
 
 .field__text[type="number"]::-webkit-outer-spin-button,

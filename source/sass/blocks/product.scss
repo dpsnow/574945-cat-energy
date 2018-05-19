@@ -6,7 +6,6 @@
 }
 
 .product__photo {
-  // display: flex;
   width: 140px;
 }
 
@@ -48,7 +47,6 @@
 
 .product__btn {
   width: 100%;
-  // margin-top: auto;
 }
 
 
@@ -57,7 +55,6 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    // align-items: center;
     margin-top: 82px;
     padding-bottom: 40px;
     background-color: #f2f2f2;
@@ -96,12 +93,5 @@
     align-self: stretch;
     margin: 0 38px;
     width: auto;
-  }
-}
-
-
-@media (min-width: $width-desktop) {
-  .product {
-    // margin: 1;
   }
 }

@@ -30,12 +30,10 @@
 
 .text--special {
   display: flex;
-  // align-items: center;
 
   &::after {
     content: "";
     display: block;
-    // margin-right: 72px;
     flex-grow: 1;
     flex-shrink: 0;
     margin-top: 11px;

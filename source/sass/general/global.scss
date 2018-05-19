@@ -1,5 +1,3 @@
-// * {outline: 1px dotted #d60909;}
-
 html {
   box-sizing: border-box;
 }
@@ -12,67 +10,10 @@ html {
 
 body {
   margin: 0 auto;
-  width: 320px;
+  width: 100%;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   font-family: $main-font;
   color: #111111;
-  // outline: 2px solid #0a5198;
-}
-
-
-@media (min-width: $width-table) {
-  body {
-    // width: $width-table;
-    width: 100%;
-  }
-}
-
-@media (min-width: $width-desktop) {
-  body {
-    width: 100%;
-  }
-}
-
-.layout {
-  // outline: 1px dotted red;
-  margin-top: inherit;
-  margin-right: auto;
-  margin-bottom: inherit;
-  margin-left: auto;
-  width: 280px;
-}
-
-@media (min-width: $width-table) {
-  .layout {
-    margin-right: auto;
-    margin-left: auto;
-    width: 708px;
-  }
-}
-
-// @media (min-width: $width-desktop) {
-//   .layout {
-//     margin-right: 110px;
-//     margin-left: 110px;
-//     width: 1220px;
-//   }
-// }
-
-
-// @media (min-width: $width-desktop) {
-//   .layout {
-//     margin-right: 40px;
-//     margin-left: 40px;
-//     width: 1220px;
-//   }
-// }
-
-
-@media (min-width: $width-desktop) {
-  .layout {
-    margin: 0 auto;
-    width: 1220px;
-  }
 }

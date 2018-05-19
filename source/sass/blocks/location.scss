@@ -63,11 +63,11 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+  }
 
-    &--city {
-      display: block;
-      margin-top: 20px;
-    }
+  .location__city {
+    display: block;
+    margin-top: 20px;
   }
 
   .location__map {

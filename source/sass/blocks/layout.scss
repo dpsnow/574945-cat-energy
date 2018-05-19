@@ -1,0 +1,22 @@
+.layout {
+  margin-top: inherit;
+  margin-right: auto;
+  margin-bottom: inherit;
+  margin-left: auto;
+  width: 280px;
+}
+
+@media (min-width: $width-table) {
+  .layout {
+    margin-right: auto;
+    margin-left: auto;
+    width: 708px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .layout {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}

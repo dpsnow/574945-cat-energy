@@ -29,20 +29,20 @@
 
 
 /* Переключение*/
-.slider__switch--to-1:checked ~ .slider__list .slider__item--before {
+.slider__before:checked ~ .slider__list .slider__item--before {
   display: block;
 }
 
-.slider__switch--to-1:checked ~ .switch .switch__scale .switch__indicator {
+.slider__before:checked ~ .switch .switch__scale .switch__indicator {
   left: 6px;
   display: block;
 }
 
-.slider__switch--to-2:checked ~ .slider__list .slider__item--after {
+.slider__after:checked ~ .slider__list .slider__item--after {
   display: block;
 }
 
-.slider__switch--to-2:checked ~ .switch .switch__scale .switch__indicator {
+.slider__after:checked ~ .switch .switch__scale .switch__indicator {
   right: 6px;
   display: block;
 }
@@ -58,7 +58,6 @@
 
   .slider__list {
     position: relative;
-    // height: 540px;
     margin: 0 16px;
     margin-bottom: 18px;
   }
@@ -79,8 +78,6 @@
       background-image: linear-gradient(to top, #f2f2f2 348px, #ffffff 329px);
     }
 
-    // &--after {
-    // }
   }
 
   .slider__controls {
@@ -94,7 +91,6 @@
 
 @media (min-width: $width-desktop) {
   .slider__list {
-    // height: 520px;
     margin: 0;
     margin-bottom: 39px;
     margin-left: -79px;

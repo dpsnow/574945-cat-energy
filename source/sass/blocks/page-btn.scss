@@ -1,16 +1,11 @@
 .page-btn {
-  // display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-  // flex-grow: 1;
-  // flex-shrink: 0;
   padding: 5px 15px;
-  // min-height: 40px;
   height: 40px;
   font-size: 16px;
   line-height: 20px;
-  // min-width: 245px;
   font-family: "Oswald", "Helvetica", "Arial", sans-serif;
   text-align: center;
   color: #ffffff;
@@ -29,12 +24,6 @@
   }
 }
 
-// @media (min-width: $width-table) {
-//   .page-btn {
-//     font-size: 20px;
-//     min-height: 52px;
-//   }
-// }
 
 .page-btn--grey {
   color: #444444;

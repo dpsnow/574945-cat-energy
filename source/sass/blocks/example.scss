@@ -78,25 +78,20 @@
     margin-top: 20px;
     font-size: 20px;
     text-align: right;
+  }
 
-    &--value {
-      display: block;
-      margin-top: 10px;
-    }
+  .example__value {
+    display: block;
+    margin-top: 10px;
   }
 
   .example__slider {
     margin-top: 50px;
-    // height: 554px;
   }
 }
 
 @media (min-width: $width-desktop) {
   .example {
-    // display: flex;
-    // flex-wrap: nowrap;
-    // justify-content: space-between;
-    // align-items: flex-end;
     padding-top: 17px;
     padding-bottom: 63px;
     border-top: none;
@@ -131,12 +126,12 @@
     margin-bottom: 10px;
     font-size: 20px;
     text-align: left;
+  }
 
-    &--value {
-      display: inline-block;
-      margin-top: 0;
-      margin-left: 59px;
-    }
+  .example__value {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 59px;
   }
 
   .example__slider {
