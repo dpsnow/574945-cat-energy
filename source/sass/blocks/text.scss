@@ -61,7 +61,7 @@
   }
 
   .text--special {
-    margin-left: calc((0px - 100vw + 100%) / 2);
+    margin-left: calc((100vw - 100%) / -2);
 
     &::before {
       content: "";
@@ -79,7 +79,7 @@
     &::after {
       margin-top: 22px;
       margin-left: 36px;
-      margin-right: calc((0px - 100vw + 100%) + 10px);
+      margin-right: calc((100vw - 100% - 11px) * -1);
     }
   }
 }
@@ -93,7 +93,7 @@
 
     &::after {
 
-      margin-right: calc((0px - 100vw + 100%) + 9px);
+      margin-right: calc((100vw - 100% - 9px) * -1);
     }
   }
 }

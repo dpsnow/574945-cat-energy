@@ -110,7 +110,7 @@
 
     &::after {
       top: -140px;
-      right: calc((0px - 100vw + 100%) / 2 + 9px);
+      right: calc((100vw - 100%) / -2 + 9px);
       left: auto;
       display: block;
       width: calc(50vw - 8px);
