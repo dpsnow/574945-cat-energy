@@ -43,7 +43,9 @@ gulp.task("minifyImg", function() {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/**/index-can-*.{png,jpg}")
+  return gulp.src(["source/img/**/index-can-*.{png,jpg}",
+                   "source/img/**/*-small-*.{png,jpg}",
+                   "source/img/**/*-big-*.{png,jpg}"])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
