@@ -1,8 +1,8 @@
 .card {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding: 25px 20px 22px 20px;
   background-color: $crl-bg-grey;
@@ -12,10 +12,10 @@
     position: absolute;
     top: 25px;
     left: 20px;
-    width: 50px;
-    height: 50px;
     margin-left: 2px;
     padding-bottom: 5px;
+    width: 50px;
+    height: 50px;
     background-color: $crl-bg-main;
     border-radius: 50%;
   }
@@ -23,8 +23,8 @@
   &::after {
     content: "";
     position: absolute;
-    background-size: auto;
     background-repeat: no-repeat;
+    background-size: auto;
   }
 }
 
@@ -88,9 +88,9 @@
   &::after {
     content: "";
     display: inline-block;
+    margin-left: 12px;
     width: 24px;
     height: 11px;
-    margin-left: 12px;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
   }
@@ -103,15 +103,15 @@
   }
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .card {
     position: relative;
     padding: 70px 284px 62px 52px;
 
     &::before {
       top: 92px;
-      left: auto;
       right: 62px;
+      left: auto;
       width: 200px;
       height: 200px;
     }
@@ -173,8 +173,8 @@
 
     &::before {
       top: 47px;
-      left: 50px;
       right: auto;
+      left: 50px;
       width: 100px;
       height: 100px;
     }
@@ -203,10 +203,10 @@
   }
 
   .card__title {
+    margin-top: 29px;
     margin-bottom: 75px;
     margin-left: 162px;
     font-size: 36px;
-    margin-top: 29px;
   }
 
   .card__descr {
@@ -214,6 +214,6 @@
   }
 
   .card--gain .card__descr {
-    width: auto;
+    width: 100%;
   }
 }

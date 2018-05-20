@@ -6,7 +6,6 @@
   @include indent-reset;
 
   margin-bottom: 34px;
-  padding-left: 20px;
   font-weight: 400;
   font-size: 24px;
   line-height: 1;
@@ -33,15 +32,18 @@
 }
 
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .additional {
     padding-top: 68px;
   }
 
   .additional__title {
     margin-bottom: 80px;
-    padding-left: 3px;
     font-size: 36px;
+
+    &::before {
+      width: calc(100vw - 100% - 2px);
+    }
   }
 
   .additional__list {
@@ -77,16 +79,17 @@
   }
 
   .additional__promo {
-    width: 245px;
-    // height: 289px;
-    height: auto;
-    // flex-basis: 245px;
     margin: 0;
+    width: 245px;
+    height: auto;
   }
 
   .additional__title {
-    padding-left: 42px;
-    margin-bottom: 82px;
+    margin-bottom: 80px;
+
+    &::before {
+      width: calc(100vw - 100% - 41px);
+    }
   }
 
   .additional__item {

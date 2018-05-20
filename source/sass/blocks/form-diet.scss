@@ -4,8 +4,9 @@
 
 .form-diet__descr {
   @include indent-reset;
-  padding-right: 15px;
+
   margin-bottom: 40px;
+  padding-right: 15px;
   font-size: 14px;
   line-height: 18px;
   text-align: left;
@@ -14,14 +15,11 @@
 
 .form-diet__group {
   @include indent-reset;
-  margin: 0;
-  // padding: 0 20px;
+
   display: block;
+  margin: 0;
   border: none;
 
-  &--extra {
-
-  }
 
   &--footer {
     display: flex;
@@ -29,31 +27,16 @@
     justify-content: center;
     margin-top: 24px;
   }
-
-  // & ~ & {
-  //   margin-top: 23px;
-  // }
 }
 
 .form-diet__main-info--diet {
-  margin-left: -20px;
   margin-right: -20px;
+  margin-left: -20px;
   padding: 22px 20px;
   border: 1px solid #ededed;
 }
 
-
-.form-diet__list-of-extras {
-
-}
-
 .form-diet__item {
-
-  &--diet {
-    border: solid 1px #ededed;
-  }
-
-
   & ~ & {
     margin-top: 14px;
   }
@@ -61,31 +44,30 @@
 
 .form-diet__subtitle {
   @include indent-reset;
+
   margin-top: 30px;
   margin-bottom: 32px;
-  margin-right: -20px;
-  margin-left: -1px;
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   text-align: left;
-  font-weight: 400;
   color: $clr-main;
 }
 
 .form-diet__btn {
-  width: 100%;
   margin-top: 15px;
+  width: 100%;
 }
 
 .form-diet__text {
   @include indent-reset;
+
   margin: 21px 0;
-  font-family: $sec-font;
   font-size: 14px;
   line-height: 16px;
+  font-family: $sec-font;
   color: $clr-text;
 }
-
 
 .form-diet__main-info {
   & ~ & {
@@ -94,25 +76,47 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .form-diet {
     padding-bottom: 73px;
   }
 
   .form-diet__descr {
-    margin-bottom: 63px;
+    margin-bottom: 64px;
     width: 340px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .form-diet__subtitle {
+    margin-top: 65px;
+    margin-bottom: 77px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &--contact {
+      margin-top: 77px;
+      margin-bottom: 74px;
+    }
+
+    &--add {
+      margin-top: 64px;
+      margin-bottom: 59px;
+    }
+  }
+
+  .form-diet__btn {
+    margin-top: 0;
+    margin-right: 60px;
+    width: 45%;
+    height: 52px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .form-diet__text {
+    margin: 0;
+    font-size: 16px;
   }
 
   .form-diet__group {
@@ -132,8 +136,8 @@
     }
 
     &--diet {
-      margin-left: 0;
       margin-right: 0;
+      margin-left: 0;
       padding: 25px 28px;
     }
   }
@@ -150,55 +154,22 @@
     }
   }
 
-  .form-diet__subtitle {
-    margin-left: -67px;
-    margin-right: -70px;
-    margin-top: 65px;
-    margin-bottom: 77px;
-    font-size: 36px;
-    line-height: 36px;
-
-    &--contact {
-      margin-top: 77px;
-      margin-bottom: 77px;
-    }
-
-    &--comment {
-      // margin-top: 65px;
-      // margin-bottom: 77px;
-    }
-
-    &--add {
-      margin-top: 64px;
-      margin-bottom: 59px;
+  .form-diet__item--diet {
+    & ~ & {
+      margin-top: 16px;
     }
   }
 
-  .form-diet__btn {
-    height: 52px;
-    width: 45%;
-    margin-top: 0;
-    margin-right: 60px;
-    font-size: 20px;
-    line-height: 1;
-  }
-
-  .form-diet__text {
-    margin: 0;
-    font-size: 16px;
-  }
-
-  .form-diet__list-of-extras .form-diet__item {
+  .form-diet__item--extra {
     margin-top: 0;
     margin-bottom: 34px;
     width: 285px;
-  }
 
-  .form-diet__main-info--diet .form-diet__item ~ .form-diet__item {
-    margin-top: 15px;
+    &:nth-of-type(n+2) {
+      margin-top: 0;
+    }
   }
 }
-
 
 @media (min-width: $width-desktop) {
   .form-diet {
@@ -207,9 +178,11 @@
 
   .form-diet__group {
     display: flex;
-    // justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &--footer {
+      justify-content: flex-start;
       margin-top: 27px;
     }
   }
@@ -219,24 +192,18 @@
     width: 45%;
 
     & ~ & {
-      margin-left: 80px;
       margin-top: 0;
+      margin-left: 80px;
     }
   }
 
   .form-diet__subtitle {
-    margin-right: -110px;
     margin-top: 67px;
     margin-bottom: 77px;
 
     &--contact {
-      margin-top: 72px;
+      margin-top: 69px;
       margin-bottom: 76px;
-    }
-
-    &--comment {
-      // margin-top: 67px;
-      // margin-bottom: 77px;
     }
 
     &--add {
@@ -245,37 +212,53 @@
     }
   }
 
-
   .form-diet__item {
-    flex-grow: 1;
-    // min-width: 285px;
-    // width: 45%;
+    flex-basis: 47%;
 
-    & + & {
+    & ~ & {
       margin-top: 0;
-      margin-left: 80px;
+    }
+
+    &:nth-of-type(n+3) {
+      margin-top: 21px;
     }
   }
 
-  .form-diet__main-info .form-diet__item + .form-diet__item {
-    margin-top: 20px;
-    margin-left: 0;
+  .form-diet__item--diet {
+    & ~ & {
+      margin-top: 16px;
+    }
   }
 
-  .form-diet__main-info--diet .form-diet__item ~ .form-diet__item {
-    margin-top: 15px;
+  .form-diet__item--main-info {
+    & + & {
+      margin-top: 20px;
+      margin-left: 0;
+    }
   }
 
-  .form-diet__btn {
-    width: 570px;
-    margin-right: 80px;
-  }
-
-  .form-diet__list-of-extras .form-diet__item {
-    width: 20%;
+  .form-diet__item--extra {
+    flex-basis: 20%;
 
     & + & {
       margin-left: 81px;
     }
+
+    &:nth-of-type(4n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(n+2) {
+      margin-top: 0;
+    }
+
+    &:nth-of-type(n+5) {
+      margin-top: 21px;
+    }
+  }
+
+  .form-diet__btn {
+    margin-right: 80px;
+    width: 570px;
   }
 }

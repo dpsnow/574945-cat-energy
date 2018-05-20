@@ -1,0 +1,39 @@
+.details__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details__cell {
+  @include indent-reset;
+}
+
+@media (min-width: $width-tablet) {
+  .details__row {
+    height: 32px;
+
+    &--underscore {
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    &--add {
+      justify-content: flex-end;
+    }
+  }
+
+  .details__row--add .details__cell {
+    min-width: 95px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .details__row {
+    &--add {
+      justify-content: space-between;
+    }
+  }
+
+  .details__row--add .details__cell {
+    min-width: auto;
+  }
+}

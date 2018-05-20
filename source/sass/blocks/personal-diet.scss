@@ -8,6 +8,7 @@
 
 .personal-diet__text {
   @include indent-reset;
+
   margin-bottom: 40px;
   font-size: 14px;
   line-height: 18px;
@@ -15,7 +16,7 @@
   color: $clr-main;
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .personal-diet {
     padding-top: 20px;
   }
@@ -25,8 +26,8 @@
   }
 
   .personal-diet__form {
-    margin-left: 41px;
     margin-right: 38px;
+    margin-left: 41px;
   }
 }
 
@@ -37,7 +38,7 @@
   }
 
   .personal-diet__form {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
 }

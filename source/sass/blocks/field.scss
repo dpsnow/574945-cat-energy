@@ -3,6 +3,16 @@
   align-items: center;
 }
 
+.field input:disabled + .field__label {
+  opacity: 0.3;
+}
+
+.field input[type="radio"]:focus + .field__label::before,
+.field input[type="checkbox"]:focus + .field__label::before {
+  box-shadow: 0 0 0 1px #bababa, 0 0 0 5px #ffffff, 0 0 0 6px #68b738;
+}
+
+
 .field__label {
   display: flex;
   align-items: center;
@@ -29,8 +39,8 @@
 .field__label--radio {
   &::before {
     content: "";
-    border-radius: 50%;
     background-color: $crl-light;
+    border-radius: 50%;
     box-shadow: 0 0 0 1px #cdcdcd;
   }
 
@@ -52,25 +62,24 @@
 }
 
 .field__text {
+  position: relative;
   display: flex;
   flex-grow: 1;
-  position: relative;
   padding: 10px 12px 10px 14px;
-  // width: 100%;
-  min-height: 45px;
   max-width: 100%;
-  font-family: inherit;
+  min-height: 45px;
   font-size: 16px;
   line-height: 18px;
+  font-family: inherit;
   text-align: left;
   color: $clr-text;
   text-transform: uppercase;
   border: solid 1px #e3e3e3;
 
   &--textarea {
+    padding-top: 15px;
     width: 100%;
     min-height: 152px;
-    padding-top: 15px;
   }
 
   &:hover {
@@ -90,8 +99,8 @@
 .field__text--email {
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
-  background-size: 18px 14px;
   background-position: right 16px center;
+  background-size: 18px 14px;
 
   &:invalid {
     background-image: url("../img/icon-mail-red.svg");
@@ -105,8 +114,8 @@
 .field__text--phone {
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
   background-position: right 14px center;
+  background-size: 20px 20px;
 
   &:invalid {
     background-image: url("../img/icon-phone-red.svg");
@@ -117,20 +126,19 @@
   }
 }
 
-
-.field__text[type=number] {
-  -moz-appearance: textfield;
+.field__text[type="number"] {
+  appearance: textfield;
 }
 
-.field__text::-webkit-outer-spin-button,
-.field__text::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+.field__text[type="number"]::-webkit-outer-spin-button,
+.field__text[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
 }
-
 
 .field__radio:checked + .field__label--radio::before {
-  border: 8px solid $crl-light;
   background-color: $crl-bg-main;
+  border: 8px solid $crl-light;
   box-shadow: 0 0 0 1px #cdcdcd;
 }
 
@@ -142,7 +150,7 @@
 }
 
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .field__label {
     font-size: 20px;
     line-height: 20px;
@@ -155,14 +163,14 @@
   }
 
   .field__text {
+    padding-left: 20px;
     min-height: 52px;
     font-size: 20px;
     line-height: 20px;
-    padding-left: 20px;
 
     &--textarea {
-      min-height: 174px;
       padding-top: 15px;
+      min-height: 174px;
     }
   }
 

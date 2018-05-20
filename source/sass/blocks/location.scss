@@ -1,12 +1,13 @@
-.location {
-
+.location__card {
+  position: relative;
+  display: flex;
 }
 
 .location__text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 27px 19px;
+  width: 100%;
   min-height: 114px;
   font-size: 16px;
   line-height: 20px;
@@ -36,36 +37,37 @@
   height: 362px;
   background-color: #fcf6f1;
   background-image: url("../img/bg-map-mobile@1x.png");
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.png");
   }
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .location__text {
+    padding-left: 41px;
+    padding-right: 41px;
     min-height: 201px;
-    padding: 62px 71px 60px 71px;
   }
 
   .location__slogan {
-    width: 155px;
+    width: 235px;
     font-size: 20px;
     line-height: 25px;
   }
 
   .location__address {
-    width: 30%;
+    width: 25%;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+  }
 
-    &--city {
-      display: block;
-      margin-top: 20px;
-    }
+  .location__city {
+    display: block;
+    margin-top: 20px;
   }
 
   .location__map {
@@ -79,30 +81,31 @@
 }
 
 @media (min-width: $width-desktop) {
-  .location {
-    position: relative;
-  }
-
   .location__text {
     position: absolute;
     top: 0;
-    left: 110px;
+    left: 0;
     z-index: 5;
-    justify-content: flex-start;
-    margin: 95px 0 104px 0;
-    padding-top: 64px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 95px;
+    margin-bottom: 104px;
+    padding-top: 66px;
     padding-right: 88px;
+    padding-bottom: 10px;
     padding-left: 76px;
+    width: 570px;
     background-color: $crl-light;
   }
 
   .location__address {
-    width: 38.5%;
     margin-left: auto;
+    width: 38.5%;
     text-align: left;
   }
 
   .location__map {
+    height: 400px;
     background-image: url("../img/bg-map-desktop@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

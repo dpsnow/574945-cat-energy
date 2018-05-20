@@ -1,6 +1,3 @@
-.food-ration {
-}
-
 .food-ration__item {
   min-height: 266px;
 
@@ -9,7 +6,7 @@
   }
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .food-ration__item {
     min-height: 372px;
 
@@ -23,7 +20,6 @@
 @media (min-width: $width-desktop) {
   .food-ration {
     display: flex;
-    // justify-content: space-between;
   }
 
   .food-ration__item {

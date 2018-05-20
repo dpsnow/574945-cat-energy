@@ -3,6 +3,8 @@ var navMain = document.querySelector('.site-nav');
 var navToggle = document.querySelector('.nav-toggle');
 
 header.classList.remove('page-header--nojs');
+navMain.classList.remove('site-nav--opened');
+navMain.classList.add('site-nav--closed');
 
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('site-nav--closed')) {

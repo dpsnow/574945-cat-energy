@@ -1,5 +1,6 @@
 .social {
   @include indent-reset;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,35 +14,24 @@
 }
 
 .social__link {
-  height: 30px;
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-
-.social__link--vk {
-  background-image: url("../img/icon----vk-mobile.svg");
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .social__link--inst {
-  background-image: url("../img/icon----insta.svg");
   background-size: 80%;
 }
 
-.social__link--fb {
-  background-image: url("../img/icon----fb.svg");
-}
-
 .social__icon {
+  display: block;
   width: 30px;
   height: auto;
-  display: block;
+
   fill: #666666;
 
   &:hover,
@@ -69,7 +59,7 @@
   }
 }
 
-@media (min-width: $width-table) {
+@media (min-width: $width-tablet) {
   .social__icon {
     &--fb {
       width: 14px;

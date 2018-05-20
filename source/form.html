@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/picturefill.js"></script>
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/svgxuse.min.js"></script>
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 <body>
@@ -13,7 +16,7 @@
   <header class="page-header page-header--nojs layout">
     <a class="page-header__logo" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img class="logo logo__header" src="img/logo-mobile.svg" alt="Логотип «Кэт Энерджи»" width="191" height="38">
       </picture>
@@ -35,31 +38,31 @@
         <div class="form-diet__group">
           <h3 class="visually-hidden">Данные кота</h3>
           <div class="form-diet__main-info">
-            <label class="form-diet__item field ">
+            <label class="form-diet__item form-diet__item--main-info field ">
               <span class="field__label text text--uppercase">Имя:*</span>
               <input class="field__text" type="text" name="cat-name" value= "Барсик" required>
             </label>
-            <label class="form-diet__item field">
+            <label class="form-diet__item form-diet__item--main-info field">
               <span class="field__label text text--uppercase">Вес (кг):*</span>
               <input class="field__text" type="number" name="cat-weight" value= "7" required>
             </label>
-            <label class="form-diet__item field">
+            <label class="form-diet__item form-diet__item--main-info field">
               <span class="field__label text text--uppercase">Возраст (лет):</span>
               <input class="field__text" type="number" name="cat-age" value= "7">
             </label>
           </div>
           <h3 class="visually-hidden">Выберите диету</h3>
           <div class="form-diet__main-info form-diet__main-info--diet">
-            <label class="form-diet__item field">
+            <label class="form-diet__item form-diet__item--diet field">
               <input class="field__radio visually-hidden" type="radio" name="diet" value="weight-loss" checked>
               <span class="field__label field__label--radio text text--uppercase">Похудение</span>
             </label>
-            <label class="form-diet__item field">
+            <label class="form-diet__item form-diet__item--diet field">
               <input class="field__radio visually-hidden" type="radio" name="diet" value="weight-gain">
               <span class="field__label field__label--radio text text--uppercase">Набор массы</span>
             </label>
-            <label class="form-diet__item field">
-              <input class="field__radio visually-hidden" type="radio" name="diet" value="need-help">
+            <label class="form-diet__item form-diet__item--diet field">
+              <input class="field__radio visually-hidden" type="radio" name="diet" value="need-help" disabled>
               <span class="field__label field__label--radio text text--uppercase">Не знаю (Нужен ваш совет)</span>
             </label>
           </div>
@@ -75,25 +78,27 @@
             <input class="field__text field__text--phone" type="tel" name="number" value="8 (960) 900-60-90" required>
           </label>
         </div>
-        <h3 class="form-diet__subtitle form-diet__subtitle--comment text text--special">Комментарий</h3>
+        <h3 class="form-diet__subtitle form-diet__subtitle--comment text text--special">
+          <label for="form-diet__message">Комментарий</label>
+        </h3>
         <div class="form-diet__group">
-          <textarea class="form-diet__item field__text field__text--textarea" name="message" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="form-diet__item field__text field__text--textarea" name="message" id="form-diet__message" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
         <h3 class="form-diet__subtitle form-diet__subtitle--add text text--special">Дополнительно</h3>
         <div class="form-diet__group form-diet__list-of-extras">
-          <label class="form-diet__item field">
+          <label class="form-diet__item form-diet__item--extra field">
             <input class="field__checkbox visually-hidden" type="checkbox" name="other-sweetener" checked>
             <span class="field__label field__label--checkbox text text--uppercase">Сахарозаменитель</span>
           </label>
-          <label class="form-diet__item field">
-            <input class="field__checkbox visually-hidden" type="checkbox" name="other-water">
+          <label class="form-diet__item form-diet__item--extra field">
+            <input class="field__checkbox visually-hidden" type="checkbox" name="other-water" disabled>
             <span class="field__label field__label--checkbox text text--uppercase">Питьевая вода</span>
           </label>
-          <label class="form-diet__item field">
+          <label class="form-diet__item form-diet__item--extra field">
             <input class="field__checkbox visually-hidden" type="checkbox" name="other-milk">
             <span class="field__label field__label--checkbox text text--uppercase">Молоко</span>
           </label>
-          <label class="form-diet__item field">
+          <label class="form-diet__item form-diet__item--extra field">
             <input class="field__checkbox visually-hidden" type="checkbox" name="other-vitamins">
             <span class="field__label field__label--checkbox text text--uppercase">Витамины</span>
           </label>
@@ -107,13 +112,15 @@
   </main>
   <footer class="page-footer footer">
     <section class="page-footer__map location">
-      <h2 class="visually-hidden">Наш адрес</h2>
-      <div class="location__text">
-        <p class="location__slogan text text--uppercase">Приглашаем
-          <br> к сотрудничеству дилеров!</p>
-        <p class="location__address text text--content">ул. Большая Конюшенная, д. 19/8
-          <span class="location__address--city">Санкт-Петербург</span>
-        </p>
+      <div class="location__card layout">
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <div class="location__text">
+          <p class="location__slogan text text--uppercase">Приглашаем
+            <br> к сотрудничеству дилеров!</p>
+          <p class="location__address text text--content">ул. Большая Конюшенная, д. 19/8
+            <span class="location__city">Санкт-Петербург</span>
+          </p>
+        </div>
       </div>
       <div class="location__map" id="map"></div>
     </section>
@@ -124,16 +131,19 @@
       <ul class="footer__item footer__social social">
         <li class="social__item">
           <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+            <svg class="social__icon social__icon--vk" width="22" height="12"><use xlink:href="img/sprite-social.svg#sp-icon-vk"></use></svg>
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy/">
+            <svg class="social__icon social__icon--inst" width="16" height="16"><use xlink:href="img/sprite-social.svg#sp-icon-insta"></use></svg>
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+            <svg class="social__icon social__icon--fb" width="10" height="19"><use xlink:href="img/sprite-social.svg#sp-icon-fb"></use></svg>
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
@@ -150,8 +160,6 @@
     </div>
   </footer>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <script src="js/map.js" type="text/javascript"></script>
-  <script src="js/nav-toggle.js" type="text/javascript"></script>
+  <script src="js/scripts.min.js" type="text/javascript"></script>
 </body>
-
 </html>

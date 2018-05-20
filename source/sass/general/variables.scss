@@ -10,20 +10,10 @@ $main-font: "Oswald", "Helvetica", "Arial", sans-serif;
 $sec-font: "Arial", sans-serif;
 
 //
-$mobile-only: 767px;
 $width-mobile: 320px;
-$width-table: 768px;
-$width-desktop: 1440px;
+$width-tablet: 768px;
+$width-desktop: 1300px;
+$mobile-only: $width-tablet - 1;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
-
-@mixin indent-reset {
-  padding: 0;
-  // margin: 0;
-
-  margin-top: 0;
-  margin-bottom: 0;
-  // margin-left: inherit;
-  // margin-right: inherit;
-}
