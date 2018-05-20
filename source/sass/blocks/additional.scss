@@ -18,11 +18,15 @@
   padding: 0;
   list-style: none;
   border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
 }
 
 .additional__item {
   min-height: 128px;
-  border-bottom: 1px solid #d6d6d6;
+
+  & + & {
+    border-top: 1px solid #d6d6d6;
+  }
 }
 
 .additional__promo {
@@ -47,11 +51,12 @@
   }
 
   .additional__list {
-    border-top: none;
+    border: 1px solid #d6d6d6;
   }
 
   .additional__item {
     min-height: 139px;
+    border-bottom: none;
   }
 
   .additional__promo {
@@ -76,6 +81,8 @@
 
   .additional__list {
     flex-basis: 895px;
+    border-left: none;
+    border-right: none;
   }
 
   .additional__promo {
