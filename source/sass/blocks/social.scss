@@ -31,13 +31,7 @@
   display: block;
   width: 30px;
   height: auto;
-
   fill: #666666;
-
-  &:hover,
-  &:focus {
-    fill: $crl-bg-main;
-  }
 
   &:active {
     opacity: 0.3;
@@ -57,6 +51,11 @@
     width: 22px;
     height: 12px;
   }
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: $crl-bg-main;
 }
 
 @media (min-width: $width-tablet) {
