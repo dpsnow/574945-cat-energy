@@ -32,11 +32,14 @@
 
 @media (min-width: $width-tablet) {
   .page-header {
+    flex-wrap: nowrap;
     padding-top: 24px;
     min-height: 120px;
   }
 
   .page-header__logo {
+    flex-grow: 0;
+    flex-shrink: 0;
     align-items: flex-start;
     width: 173px;
     height: 58px;
@@ -51,13 +54,30 @@
 
 @media (min-width: $width-desktop) {
   .page-header {
+    position: relative;
     padding-top: 54px;
     min-height: 140px;
+
+    &--index::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: calc((100vw - 100%) / -2 + 9px);
+      z-index: -5;
+      display: block;
+      width: calc(50vw - 8px);
+      height: 100%;
+      background-color: #64a93c;
+    }
   }
 
   .page-header__logo {
     align-items: flex-start;
     width: 202px;
     height: 59px;
+  }
+
+  .page-header__nav {
+    width: 50%;
   }
 }

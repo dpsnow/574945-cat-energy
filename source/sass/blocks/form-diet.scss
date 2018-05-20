@@ -37,11 +37,6 @@
 }
 
 .form-diet__item {
-  &--diet {
-    border: solid 1px #ededed;
-  }
-
-
   & ~ & {
     margin-top: 14px;
   }
@@ -74,7 +69,6 @@
   color: $clr-text;
 }
 
-
 .form-diet__main-info {
   & ~ & {
     margin-top: 23px;
@@ -88,10 +82,41 @@
   }
 
   .form-diet__descr {
-    margin-bottom: 63px;
+    margin-bottom: 64px;
     width: 340px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .form-diet__subtitle {
+    margin-top: 65px;
+    margin-bottom: 77px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &--contact {
+      margin-top: 77px;
+      margin-bottom: 74px;
+    }
+
+    &--add {
+      margin-top: 64px;
+      margin-bottom: 59px;
+    }
+  }
+
+  .form-diet__btn {
+    margin-top: 0;
+    margin-right: 60px;
+    width: 45%;
+    height: 52px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .form-diet__text {
+    margin: 0;
+    font-size: 16px;
   }
 
   .form-diet__group {
@@ -129,48 +154,22 @@
     }
   }
 
-  .form-diet__subtitle {
-    margin-top: 65px;
-    margin-bottom: 77px;
-    font-size: 36px;
-    line-height: 36px;
-
-    &--contact {
-      margin-top: 77px;
-      margin-bottom: 77px;
-    }
-
-    &--add {
-      margin-top: 64px;
-      margin-bottom: 59px;
+  .form-diet__item--diet {
+    & ~ & {
+      margin-top: 16px;
     }
   }
 
-  .form-diet__btn {
-    margin-top: 0;
-    margin-right: 60px;
-    width: 45%;
-    height: 52px;
-    font-size: 20px;
-    line-height: 1;
-  }
-
-  .form-diet__text {
-    margin: 0;
-    font-size: 16px;
-  }
-
-  .form-diet__list-of-extras .form-diet__item {
+  .form-diet__item--extra {
     margin-top: 0;
     margin-bottom: 34px;
     width: 285px;
-  }
 
-  .form-diet__main-info--diet .form-diet__item ~ .form-diet__item {
-    margin-top: 15px;
+    &:nth-of-type(n+2) {
+      margin-top: 0;
+    }
   }
 }
-
 
 @media (min-width: $width-desktop) {
   .form-diet {
@@ -179,8 +178,11 @@
 
   .form-diet__group {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &--footer {
+      justify-content: flex-start;
       margin-top: 27px;
     }
   }
@@ -200,7 +202,7 @@
     margin-bottom: 77px;
 
     &--contact {
-      margin-top: 72px;
+      margin-top: 69px;
       margin-bottom: 76px;
     }
 
@@ -210,35 +212,53 @@
     }
   }
 
-
   .form-diet__item {
-    flex-grow: 1;
+    flex-basis: 47%;
 
-    & + & {
+    & ~ & {
       margin-top: 0;
-      margin-left: 80px;
+    }
+
+    &:nth-of-type(n+3) {
+      margin-top: 21px;
     }
   }
 
-  .form-diet__main-info .form-diet__item + .form-diet__item {
-    margin-top: 20px;
-    margin-left: 0;
+  .form-diet__item--diet {
+    & ~ & {
+      margin-top: 16px;
+    }
   }
 
-  .form-diet__main-info--diet .form-diet__item ~ .form-diet__item {
-    margin-top: 15px;
+  .form-diet__item--main-info {
+    & + & {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+
+  .form-diet__item--extra {
+    flex-basis: 20%;
+
+    & + & {
+      margin-left: 81px;
+    }
+
+    &:nth-of-type(4n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(n+2) {
+      margin-top: 0;
+    }
+
+    &:nth-of-type(n+5) {
+      margin-top: 21px;
+    }
   }
 
   .form-diet__btn {
     margin-right: 80px;
     width: 570px;
-  }
-
-  .form-diet__list-of-extras .form-diet__item {
-    width: 20%;
-
-    & + & {
-      margin-left: 81px;
-    }
   }
 }

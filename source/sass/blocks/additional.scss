@@ -40,6 +40,10 @@
   .additional__title {
     margin-bottom: 80px;
     font-size: 36px;
+
+    &::before {
+      width: calc(100vw - 100% - 2px);
+    }
   }
 
   .additional__list {
@@ -81,7 +85,11 @@
   }
 
   .additional__title {
-    margin-bottom: 82px;
+    margin-bottom: 80px;
+
+    &::before {
+      width: calc(100vw - 100% - 41px);
+    }
   }
 
   .additional__item {

@@ -80,6 +80,8 @@
 @media (min-width: $width-tablet) {
   .site-nav__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .site-nav__item {

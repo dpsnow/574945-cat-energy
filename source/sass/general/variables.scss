@@ -10,10 +10,10 @@ $main-font: "Oswald", "Helvetica", "Arial", sans-serif;
 $sec-font: "Arial", sans-serif;
 
 //
-$mobile-only: 767px;
 $width-mobile: 320px;
-$width-tablet: $mobile-only - 1;
+$width-tablet: 768px;
 $width-desktop: 1300px;
+$mobile-only: $width-tablet - 1;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
